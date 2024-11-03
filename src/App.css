@@ -36,3 +36,17 @@
     transform: rotate(360deg);
   }
 }
+
+.main-content {
+  display: flex;
+  flex: 1;
+  /* margin-top: 70px; Offset for the header */
+}
+
+.content-area {
+  flex: 1;
+  padding: 1rem;
+  background-color: #ffffff;
+  /* margin-left: 60px; Prevents overlap with the sidebar */
+}
+
