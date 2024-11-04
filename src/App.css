@@ -45,8 +45,18 @@
 
 .content-area {
   flex: 1;
-  padding: 1rem;
+  /* padding: 1rem; */
   background-color: #ffffff;
+  margin-left: 12px;
+  margin-right: 12px;
   /* margin-left: 60px; Prevents overlap with the sidebar */
+}
+
+.browse-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  color: rgb(242, 141, 77); 
 }
 

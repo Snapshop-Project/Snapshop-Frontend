@@ -4,10 +4,12 @@
     align-items: center; /* Align items vertically in the center */
     justify-content: space-between; /* Space out items to center the filter button */
     width: 100%; /* Ensure the container takes the full width */
+    margin-top: 35px;
+    margin-bottom: 15px;
 }
 
 .search-bar {
-    width: 95%;
+    width: 90%;
     /* max-width: 550px; */
     display: flex;
     align-items: center;
@@ -16,8 +18,7 @@
     background-color: #f1f1f1;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     height: 40px; /* Set a specific height for the search bar */
-    margin-top: 15px;
-    margin-bottom: 5px;
+    margin-bottom: 15px;
 }
 
 .search-bar input {
@@ -59,8 +60,8 @@
     transition: background-color 0.3s; /* Smooth transition for hover effect */
     height: 55px; 
     width: 55px;
-    margin-top: 15px;
-    margin-bottom: 5px;
+    margin-bottom: 15px;
+    
 }
 
 .filter-button:hover {
@@ -70,4 +71,91 @@
 .filter-icon {
     color: rgb(255, 255, 255);
     font-size: 33px; /* Adjust size as needed */
+}
+
+.filter-popup {
+    position: absolute;
+    top: 205px; /* Adjust based on filter button position */
+    right: 10px;
+    width: 205px;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: -6px -1px 8px rgba(0, 0, 0, 0.135);
+    border-radius: 8px;
+    z-index: 10;
+}
+
+.filter-popup h4 {
+    margin: 0 0 10px;
+    color:rgb(223, 112, 43);
+    font-size: 20px;
+}
+
+.filter-popup h5 {
+    /* margin: 0 0 10px; */
+    color:rgb(0, 0, 0);
+    font-size: 15px;
+    margin-top: 18px;
+    margin-bottom: 5px;
+}
+
+.filter-popup ul {
+    list-style: none;
+    padding: 0;
+}
+
+.filter-popup ul li {
+    margin-bottom: 8px;
+}
+
+.filter-popup button {
+    margin-top: 10px;
+    padding: 5px 10px;
+    background-color: rgb(242, 141, 77);
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold; /* Makes the text bold */
+}
+
+.color-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 8px;
+    width: 220px;
+}
+
+.color-option {
+    width: 24px;
+    height: 24px;
+    border: 1px solid rgb(217, 217, 217); /* Dark, thick border for contrast */
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.2s;
+    box-sizing: border-box; /* Ensures border doesn't shrink the button */
+    margin: 2px; /* Adds spacing between color buttons */
+}
+
+.color-option:hover {
+    transform: scale(1.1);
+    border-color: #888; /* Lighter color on hover */
+}
+
+.filter-button-wrapper {
+    position: relative;
+}
+
+.filter-count-badge {
+    position: absolute;
+    top: -9px;
+    right: -7px;
+    background-color: rgb(242, 141, 77);
+    color: rgb(255, 255, 255);
+    border: 1px solid rgb(255, 255, 255);
+    font-size: 12px;
+    padding: 4px 6px;
+    border-radius: 100%;
+    line-height: 1;
 }

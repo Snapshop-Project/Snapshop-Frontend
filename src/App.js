@@ -20,7 +20,9 @@ function App() {
         {/* Main content area */}
         <div className="content-area">
           {/* You can add main content here */}
-          {/* <h1>Content Area</h1> */}
+          {/* <div className="browse-header">
+            <h1>BROWSE</h1>
+          </div> */}
           <SearchBarr />
           <PhotoGrid />
         </div>

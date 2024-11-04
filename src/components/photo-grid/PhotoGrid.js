@@ -11,6 +11,8 @@ const images = [
     '/ExampleImages/Stairs.jpg',
     '/ExampleImages/Turtle.jpg',
     '/ExampleImages/Wedding.jpg',
+    '/ExampleImages/RedPanda.jpg',
+    '/ExampleImages/Sunset.jpg',
 ];
 
 const PhotoGrid = () => {
