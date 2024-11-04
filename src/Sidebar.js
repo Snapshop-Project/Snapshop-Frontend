@@ -7,14 +7,17 @@ const Sidebar = () => {
   return (
     <nav className="sidebar">
       <div className="sidebar-icon">
-        <FaUser size={35} />
+        <FaUser size={42} />
       </div>
+      <div className="divider"></div>
       <div className="sidebar-icon">
-        <FaDollarSign size={35} />
+        <FaDollarSign size={42} />
       </div>
+      <div className="divider"></div>
       <div className="sidebar-icon">
-        <FaShoppingCart size={35} />
+        <FaShoppingCart size={42} />
       </div>
+      <div className="divider"></div>
     </nav>
   );
 };

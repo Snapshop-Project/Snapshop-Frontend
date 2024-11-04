@@ -1,7 +1,11 @@
 // import logo from './logo.svg';
 import Header from './Header.js';
 import Sidebar from './Sidebar.js';
+import SearchBarr from './SearchBarr.js';
+import PhotoGrid from './PhotoGrid.js';
+
 import './App.css';
+
 
 function App() {
   return (
@@ -16,7 +20,9 @@ function App() {
         {/* Main content area */}
         <div className="content-area">
           {/* You can add main content here */}
-          <h1>Content Area</h1>
+          {/* <h1>Content Area</h1> */}
+          <SearchBarr />
+          <PhotoGrid />
         </div>
       </div>
     </div>

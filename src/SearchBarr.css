@@ -1,0 +1,71 @@
+
+.search-container {
+    display: flex;
+    align-items: center; /* Align items vertically in the center */
+    justify-content: space-between; /* Space out items to center the filter button */
+    width: 100%; /* Ensure the container takes the full width */
+}
+
+.search-bar {
+    width: 95%;
+    /* max-width: 550px; */
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    border-radius: 20px;
+    background-color: #f1f1f1;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    height: 40px; /* Set a specific height for the search bar */
+    margin-top: 15px;
+    margin-bottom: 1px;
+}
+
+.search-bar input {
+    width: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 8px 12px;
+    font-size: 20px;
+    /* font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; */
+    color: #000;
+    height: 100%;
+}
+
+.search-bar input::placeholder {
+    color: rgba(0, 0, 0, 0.5); /* Example: Light gray color */
+    opacity: 1; /* Ensure the opacity is set to full */
+    font-size: 20px;
+}
+
+.search-icon {
+    color: rgb(242, 141, 77);
+    font-size: 35px;
+    margin-left: 8px; /* Spacing between input and icon */
+    margin-right: 8px;
+}
+
+
+
+.filter-button {
+    border: 1px solid rgb(242, 141, 77); /* Add a small border */
+    background-color: rgb(242, 141, 77); /* Keep the background transparent */
+    cursor: pointer;
+    padding: 8px; /* Adjust padding for the button */
+    margin-left: 24px; /* Spacing between search bar and filter button */
+    border-radius: 5px; /* Optional: rounded corners for the border */
+    display: flex; /* Center the icon in the button */
+    align-items: center;
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+    height: 55px; 
+    width: 55px;
+}
+
+.filter-button:hover {
+    background-color: rgb(223, 112, 43); /* Change background on hover */
+}
+
+.filter-icon {
+    color: rgb(255, 255, 255);
+    font-size: 33px; /* Adjust size as needed */
+}

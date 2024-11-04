@@ -10,7 +10,7 @@ const Header = () => {
       <div className="header-content">
         {/* Centered logo as home button */}
         {/*<Link to="/" className="logo-link"> */}
-          <img src="/Logo.jpg" alt="Logo" className="logo" />
+          <img src="/Logo2.jpeg" alt="Logo" className="logo" />
         {/*</Link> */}
       </div>
     </header>
