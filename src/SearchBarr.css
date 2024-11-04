@@ -17,7 +17,7 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     height: 40px; /* Set a specific height for the search bar */
     margin-top: 15px;
-    margin-bottom: 1px;
+    margin-bottom: 5px;
 }
 
 .search-bar input {
@@ -59,6 +59,8 @@
     transition: background-color 0.3s; /* Smooth transition for hover effect */
     height: 55px; 
     width: 55px;
+    margin-top: 15px;
+    margin-bottom: 5px;
 }
 
 .filter-button:hover {
