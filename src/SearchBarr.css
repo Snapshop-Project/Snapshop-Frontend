@@ -80,7 +80,7 @@
     width: 205px;
     padding: 20px;
     background-color: #ffffff;
-    box-shadow: -6px 6px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: -6px -1px 8px rgba(0, 0, 0, 0.135);
     border-radius: 8px;
     z-index: 10;
 }
