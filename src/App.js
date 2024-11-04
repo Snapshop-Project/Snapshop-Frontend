@@ -1,8 +1,8 @@
 // import logo from './logo.svg';
-import Header from './Header.js';
-import Sidebar from './Sidebar.js';
-import SearchBarr from './SearchBarr.js';
-import PhotoGrid from './PhotoGrid.js';
+import Header from './components/main-header/Header.js';
+import Sidebar from './components/side-bar/Sidebar.js';
+import SearchBarr from './components/search-bar/SearchBarr.js';
+import PhotoGrid from './components/photo-grid/PhotoGrid.js';
 
 import './App.css';
 
