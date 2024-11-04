@@ -1,8 +1,7 @@
 import React, { Fragment } from "react";
 import { Route, Routes } from 'react-router-dom';
 import Browser from './pages/browsing/index';
-import Header from "./components/main-header/Header";
-import Sidebar from "./components/side-bar/Sidebar";
+import Cart from "./pages/cart";
 
 const RoutesTree = () => {
   return (
@@ -10,9 +9,11 @@ const RoutesTree = () => {
       <Routes>
         <Fragment>
             <Route path="/" element={<Browser />}/>
+            <Route path="/cart" element={<Cart />}/>
         </Fragment>
       </Routes>
     </div>
+
   )
 }
 
