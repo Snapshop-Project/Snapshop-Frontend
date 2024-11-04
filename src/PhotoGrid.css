@@ -1,7 +1,7 @@
 
 .photo-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* Allow up to 4 columns */
+    grid-template-columns: repeat(5, 1fr); /* Allow up to 4 columns */
     gap: 10px;                             /* Space between images */
     max-width: 100%;                      /* Optional: limit width */
     margin: auto;                          /* Center the grid horizontally */
@@ -9,6 +9,12 @@
 }
 
 @media (max-width: 1200px) { /* When the window is smaller than 1200px */
+    .photo-grid {
+        grid-template-columns: repeat(4, 1fr); /* Change to 3 columns */
+    }
+}
+
+@media (max-width: 1000px) { /* When the window is smaller than 1200px */
     .photo-grid {
         grid-template-columns: repeat(3, 1fr); /* Change to 3 columns */
     }
@@ -22,7 +28,7 @@
 
 @media (max-width: 600px) { /* When the window is smaller than 600px */
     .photo-grid {
-        grid-template-columns: 1fr; /* Change to 1 column */
+        grid-template-columns: 2fr; /* Change to 1 column */
     }
 }
 
@@ -34,6 +40,7 @@
     position: relative;
     cursor: pointer;
 }
+
 
 .photo-item img {
     position: absolute;
