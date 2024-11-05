@@ -40,16 +40,15 @@
   .main-content {
     display: flex;
     flex: 1;
-    /* margin-top: 70px; Offset for the header */
+    margin-top: 100px; /* Offset for header height */
+    margin-left: 70px; /* Offset for sidebar width */
   }
   
   .content-area {
     flex: 1;
-    /* padding: 1rem; */
     background-color: #ffffff;
-    margin-left: 12px;
-    margin-right: 12px;
-    /* margin-left: 60px; Prevents overlap with the sidebar */
+    margin-left: 15px;
+    margin-right: 15px;
   }
   
   .browse-header {
