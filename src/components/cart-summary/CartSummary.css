@@ -1,0 +1,42 @@
+.cart-summary {
+    border: 1px solid #e5e5e5;
+    padding: 20px;
+    width: 300px;
+    font-family: Arial, sans-serif;
+    height: 200px;
+  }
+  
+  .cart-summary h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    margin-top: 0px;
+  }
+  
+  .summary-details {
+    margin-bottom: 15px;
+  }
+  
+  .summary-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    margin: 8px 0;
+  }
+  
+  .summary-row.total {
+    font-weight: bold;
+    font-size: 18px;
+    border-top: 1px solid #e5e5e5;
+    padding-top: 10px;
+  }
+  
+  .checkout-button {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    margin-top: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+  }
