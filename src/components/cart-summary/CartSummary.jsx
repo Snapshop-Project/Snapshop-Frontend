@@ -2,8 +2,8 @@ import React from 'react';
 import './CartSummary.css';
 
 function CartSummary() {
-  const itemsInCart = 2;
-  const subtotal = 360.00;
+  const itemsInCart = 4;
+  const subtotal = 48.96;
 
   return (
     <div className="cart-summary">

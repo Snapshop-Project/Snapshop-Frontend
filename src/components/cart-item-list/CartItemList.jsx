@@ -5,10 +5,10 @@ import { IconButton } from '@mui/material';
 
 function CartItemList() {
   const items = [
-    { id: 1, name: "Item 1", price: 10.99 },
-    { id: 2, name: "Item 2", price: 15.99 },
-    { id: 3, name: "Item 3", price: 12.99 },
-    { id: 4, name: "Item 4", price: 8.99 },
+    { id: 1, name: "The one that got away", price: 10.99, src: '/ExampleImages/Cave.jpg' },
+    { id: 2, name: "Sunset", price: 15.99, src: '/ExampleImages/Cityscape.jpg' },
+    { id: 3, name: "Morning Hike", price: 12.99, src: '/ExampleImages/Animal.jpg' },
+    { id: 4, name: "Jumping", price: 8.99, src: '/ExampleImages/Portrait.jpg' },
   ];
 
   return (
@@ -17,13 +17,15 @@ function CartItemList() {
       <div className="item-grid">
         {items.map((item) => (
           <div key={item.id} className="item-card">
+            <IconButton className="cancel-button">
+              <CancelIcon fontSize="large" style={{ color: 'red' }}/>
+            </IconButton>
             <div className="item-header">
               <span className="item-name">{item.name}</span>
-              <IconButton>
-                <CancelIcon fontSize="small" />
-            </IconButton>
             </div>
-            <div className="item-image"></div>
+            <div className="item-image">
+              <img src={item.src} alt={item.name} className="item-img" />
+            </div>
             <div className="item-price">${item.price.toFixed(2)}</div>
           </div>
         ))}
