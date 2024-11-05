@@ -8,7 +8,7 @@ const Sidebar = () => {
   const navigate = useNavigate();
   return (
     <nav className="sidebar">
-      <div className="sidebar-icon">
+      <div className="sidebar-icon" onClick={() => navigate('/profile')}>
         <FaUser size={42} />
       </div>
       <div className="divider"></div>

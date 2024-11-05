@@ -1,0 +1,29 @@
+.profile-album {
+    width: 200px;
+    margin-bottom: 20px;
+    text-align: center;
+    border: 2px solid rgb(242, 141, 77);  
+    border-radius: 15px; 
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+.album-image {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.album-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+.profile-album p {
+    margin-top: 10px;
+    font-size: 15px;
+    font-weight: bold;
+}
