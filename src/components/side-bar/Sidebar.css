@@ -1,16 +1,18 @@
 /* src/components/Sidebar.css */
 .sidebar {
     width: 70px;
-    height: auto;
+    height: 100%;
     background-color: #ffffff;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding-top: 1rem;
     color: #000000;
-    box-shadow: 2px 0px 4px #0000001f; /* Adjusted shadow for better visibility */
-    position: relative; /* Added position for z-index */
-    z-index: 1; /* Make sure it's on top */
+    box-shadow: 2px 0px 4px #0000001f; 
+    position: fixed; /* Fix to the side of the page */
+    top: 100px; /* Adjusts for the header height */
+    left: 0;
+    z-index: 999; /* Ensure it’s layered properly */
   }
   
   .sidebar-icon {
@@ -30,10 +32,10 @@
   }
 
   .divider {
-    width: 50px;                         /* Adjust thickness of the line */
-    height: 2px;                       /* Adjust height as needed */
+    width: 50px;                         
+    height: 2px;                       
     background-color: #e8e8e8;
-    margin: 5px 0;                       /* Ensure consistent vertical margin */ 
+    margin: 5px 0;                       
 } 
   
   

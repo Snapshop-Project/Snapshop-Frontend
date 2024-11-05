@@ -1,12 +1,14 @@
-/* src/components/Header.css */
+
 .header {
     width: 100%;
     height: 100px;
     padding: 0.2rem;
-    background-color: rgb(242, 141, 77); /* Change as needed */
-    box-shadow: 0 2px 4px #00000026; /* Adjusted shadow for better visibility */
-    position: relative; /* Added position for z-index */
-    z-index: 1; /* Make sure it's on top */
+    background-color: rgb(242, 141, 77); 
+    box-shadow: 0 2px 4px #00000026; 
+    position: fixed; 
+    top: 0;
+    left: 0;
+    z-index: 1000; 
   }
   
   .header-content {
