@@ -2,13 +2,14 @@
 import React from 'react';
 import { FaUser, FaDollarSign, FaShoppingCart } from 'react-icons/fa'; // Importing icons
 import './Sidebar.css';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 
 const Sidebar = () => {
   const navigate = useNavigate();
+  const location = useLocation();
   return (
     <nav className="sidebar">
-      <div className="sidebar-icon">
+      <div className="sidebar-icon" onClick={() => navigate('/profile')} style={{ color: location.pathname === '/profile' ? 'rgb(242, 141, 77)' : 'inherit' }}>
         <FaUser size={42} />
       </div>
       <div className="divider"></div>
@@ -16,7 +17,7 @@ const Sidebar = () => {
         <FaDollarSign size={42} />
       </div>
       <div className="divider"></div>
-      <div className="sidebar-icon" onClick={() => navigate('/cart')}>
+      <div className="sidebar-icon" onClick={() => navigate('/cart')} style={{ color: location.pathname === '/cart' ? 'rgb(242, 141, 77)' : 'inherit' }}>
         <FaShoppingCart size={42} />
       </div>
       <div className="divider"></div>

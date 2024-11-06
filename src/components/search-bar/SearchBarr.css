@@ -113,7 +113,6 @@
 .filter-popup button {
     margin-top: 10px;
     padding: 5px 10px;
-    background-color: rgb(242, 141, 77);
     border: none;
     color: white;
     border-radius: 5px;
@@ -161,4 +160,39 @@
     padding: 4px 6px;
     border-radius: 100%;
     line-height: 1;
+}
+
+.filter-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.clear-button {
+    background-color: #acacac; /* Red for clear button */
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.clear-button:hover {
+    background-color: #989898; /* Darker red on hover */
+}
+
+.close-button {
+    background-color: rgb(242, 141, 77);; /* Green for close button */
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.close-button:hover {
+    background-color: rgb(223, 112, 43); /* Darker green on hover */
 }
