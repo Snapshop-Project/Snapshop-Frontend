@@ -3,8 +3,8 @@ import './ProfileAlbum.css';
 
 function ProfileAlbum({ name, albumPicture }) {
   return (
-    <div className="profile-album">
-        <div className="album-image">
+    <div className="profile-album2">
+        <div className="album-image2">
             <img src={albumPicture} alt={name} />
         </div>
         <p>{name}</p>

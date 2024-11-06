@@ -22,13 +22,13 @@ function ProfilePage() {
   };
 
   return (
-    <div className="profile-page">
+    <div className="profile-page-container">
       <Header />
-      <div className="profile-main-content">
+      <div className="profile-main-content-page">
         <Sidebar />
-        <div className="profile-content-area">
+        <div className="profile-content-area-page">
           <ProfileHeader {...profileInfo} />
-          <div className="profile-albums">
+          <div className="profile-albums-page">
             {albums.map((album, index) => (
                 <ProfileAlbum key={index} {...album} />
               ))}

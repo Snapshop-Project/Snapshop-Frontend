@@ -183,7 +183,7 @@
     background-color: #989898; /* Darker red on hover */
 }
 
-.close-button {
+.close-button2 {
     background-color: rgb(242, 141, 77);; /* Green for close button */
     color: white;
     padding: 5px 10px;
@@ -193,6 +193,6 @@
     transition: background-color 0.3s;
 }
 
-.close-button:hover {
+.close-button2:hover {
     background-color: rgb(223, 112, 43); /* Darker green on hover */
 }

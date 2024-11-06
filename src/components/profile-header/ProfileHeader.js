@@ -5,7 +5,7 @@ function ProfileHeader({ name, bio, contactDetails, profilePicture }) {
   return (
     <div className="profile-header2">
       <div className="profile-picture2">
-        <img src={profilePicture} alt="Profile Picture" className="rounded-img" />
+        <img src={profilePicture} alt="Profile Picture"/>
       </div>
       <div>
         <h2>{name}</h2>
