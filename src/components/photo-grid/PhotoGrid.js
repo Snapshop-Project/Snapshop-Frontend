@@ -1,27 +1,30 @@
 // src/components/PhotoGrid.js
 import React from 'react';
-import './PhotoGrid.css'; // Ensure you create this CSS file
+import { Link } from 'react-router-dom';
+import './PhotoGrid.css';
 
 const images = [
-    '/ExampleImages/Cave.jpg',
-    '/ExampleImages/Cityscape.jpg',
-    '/ExampleImages/Animal.jpg',
-    '/ExampleImages/Portrait.jpg',
-    '/ExampleImages/PinkFlowers.jpg',
-    '/ExampleImages/Stairs.jpg',
-    '/ExampleImages/Turtle.jpg',
-    '/ExampleImages/Wedding.jpg',
-    '/ExampleImages/RedPanda.jpg',
-    '/ExampleImages/Sunset.jpg',
+    { id: 'cave', src: '/ExampleImages/Cave.jpg' },
+    { id: 'cityscape', src: '/ExampleImages/Cityscape.jpg' },
+    { id: 'animal', src: '/ExampleImages/Animal.jpg' },
+    { id: 'portrait', src: '/ExampleImages/Portrait.jpg' },
+    { id: 'pinkflowers', src: '/ExampleImages/PinkFlowers.jpg' },
+    { id: 'stairs', src: '/ExampleImages/Stairs.jpg' },
+    { id: 'turtle', src: '/ExampleImages/Turtle.jpg' },
+    { id: 'wedding', src: '/ExampleImages/Wedding.jpg' },
+    { id: 'redpanda', src: '/ExampleImages/RedPanda.jpg' },
+    { id: 'sunset', src: '/ExampleImages/Sunset.jpg' },
 ];
 
 const PhotoGrid = () => {
     return (
         <div className="photo-grid">
-            {images.map((src, index) => (
-                <div className="photo-item" key={index}>
-                    <img src={src} alt={`Photo ${index + 1}`} onError={(e) => e.target.style.display = 'none'} />
-                </div>
+            {images.map((image) => (
+                <Link to={`/picture/${image.id}`} key={image.id} className="photo-item-link">
+                    <div className="photo-item">
+                        <img src={image.src} alt={`Photo of ${image.id}`} onError={(e) => e.target.style.display = 'none'} />
+                    </div>
+                </Link>
             ))}
         </div>
     );
