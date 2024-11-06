@@ -9,7 +9,7 @@ const Sidebar = () => {
   const location = useLocation();
   return (
     <nav className="sidebar">
-      <div className="sidebar-icon" onClick={() => navigate('/profile')}>
+      <div className="sidebar-icon" onClick={() => navigate('/profile')} style={{ color: location.pathname === '/profile' ? 'rgb(242, 141, 77)' : 'inherit' }}>
         <FaUser size={42} />
       </div>
       <div className="divider"></div>
