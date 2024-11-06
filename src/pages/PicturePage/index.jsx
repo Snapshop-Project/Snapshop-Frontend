@@ -69,16 +69,6 @@ function PicturePage() {
                             <p className="image-description">{image.description}</p>
                             <p className="stock-id">{`Stock Photo ID: ${image.stockId}`}</p>
 
-                            <div className="rating-section">
-                                <h3>Rate this photo:</h3>
-                                {[...Array(5)].map((_, index) => (
-                                    <span key={index} onClick={() => handleRating(index + 1)} style={{ cursor: 'pointer', color: index < rating ? 'gold' : 'gray' }}>
-                                        ★
-                                    </span>
-                                ))}
-                                <p>{rating > 0 ? `You rated this photo ${rating} star(s)` : 'No rating yet'}</p>
-                            </div>
-
                             <div className="pricing-section">
                                 <h3>Purchase Options (CAD)</h3>
                                 <div className="price-option">
@@ -89,6 +79,16 @@ function PicturePage() {
                                     <input type="radio" name="price" />
                                     <label>{`$${(image.price * 0.75).toFixed(2)} for 25 images/month`}</label>
                                 </div>
+                            </div>
+
+                            <div className="rating-section">
+                                <h3>Rate this photo:</h3>
+                                {[...Array(5)].map((_, index) => (
+                                    <span key={index} onClick={() => handleRating(index + 1)} style={{ cursor: 'pointer', color: index < rating ? 'gold' : 'gray' }}>
+                                        ★
+                                    </span>
+                                ))}
+                                <p>{rating > 0 ? `You rated this photo ${rating} star(s)` : 'No rating yet'}</p>
                             </div>
 
                             <div className="action-buttons">
