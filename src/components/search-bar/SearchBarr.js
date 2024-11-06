@@ -7,7 +7,7 @@ import './SearchBarr.css';
 const SearchBarr = () => {
     const [isFilterOpen, setIsFilterOpen] = useState(false);
     const [activeFilters, setActiveFilters] = useState({
-        people: false,
+        people: '',
         orientation: '',
         size: '',
         color: '',
@@ -17,12 +17,12 @@ const SearchBarr = () => {
     const toggleFilterPopup = () => {
         if (isFilterOpen) {
             // Reset filters when closing the popup
-            setActiveFilters({
-                people: false,
-                orientation: '',
-                size: '',
-                color: '',
-            });
+            // setActiveFilters({
+            //     people: false,
+            //     orientation: '',
+            //     size: '',
+            //     color: '',
+            // });
         }
         setIsFilterOpen(!isFilterOpen);
     };
@@ -32,6 +32,16 @@ const SearchBarr = () => {
             ...prev,
             [category]: value,
         }));
+    };
+
+    const clearFilters = () => {
+        // Reset active filters when clear filters is clicked
+        setActiveFilters({
+            people: '',
+            orientation: '',
+            size: '',
+            color: '',
+        });
     };
 
     const filterCount = (() => {
@@ -63,35 +73,35 @@ const SearchBarr = () => {
                     <h4>Filter Options</h4>
                     <h5>People</h5>
                     <label>
-                        <input type="radio" name="people-filter" value="people" onChange={() => handleFilterChange('people', true)}/>
+                        <input type="radio" name="people-filter" value="people" onChange={() => handleFilterChange('people', 'people')} checked={activeFilters.people === 'people'}/>
                         People
                     </label>
                     <label>
-                        <input type="radio" name="people-filter" value="no-people" onChange={() => handleFilterChange('people', true)}/>
+                        <input type="radio" name="people-filter" value="no-people" onChange={() => handleFilterChange('people', 'no-people')} checked={activeFilters.people === 'no-people'}/>
                         No People
                     </label>
 
                     <h5>Orientation</h5>
                     <label>
-                        <input type="radio" name="orientation-filter" value="vertical" onChange={() => handleFilterChange('orientation', 'vertical')}/>
+                        <input type="radio" name="orientation-filter" value="vertical" onChange={() => handleFilterChange('orientation', 'vertical')} checked={activeFilters.orientation === 'vertical'}/>
                         Vertical
                     </label>
                     <label>
-                        <input type="radio" name="orientation-filter" value="horizontal" onChange={() => handleFilterChange('orientation', 'horizontal')}/>
+                        <input type="radio" name="orientation-filter" value="horizontal" onChange={() => handleFilterChange('orientation', 'horizontal')} checked={activeFilters.orientation === 'horizontal'}/>
                         Horizontal
                     </label>
 
                     <h5>Size</h5>
                     <label>
-                        <input type="radio" name="size-filter" value="small" onChange={() => handleFilterChange('size', 'small')}/>
+                        <input type="radio" name="size-filter" value="small" onChange={() => handleFilterChange('size', 'small')} checked={activeFilters.size === 'small'}/>
                         Small
                     </label>
                     <label>
-                        <input type="radio" name="size-filter" value="medium" onChange={() => handleFilterChange('size', 'medium')}/>
+                        <input type="radio" name="size-filter" value="medium" onChange={() => handleFilterChange('size', 'medium')} checked={activeFilters.size === 'medium'}/>
                         Medium
                     </label>
                     <label>
-                        <input type="radio" name="size-filter" value="large" onChange={() => handleFilterChange('size', 'large')}/>
+                        <input type="radio" name="size-filter" value="large" onChange={() => handleFilterChange('size', 'large')} checked={activeFilters.size === 'large'}/>
                         Large
                     </label>
 
@@ -112,7 +122,10 @@ const SearchBarr = () => {
                     ))}
                     </div>
 
-                    <button onClick={toggleFilterPopup}>Close</button >
+                    <div className="filter-actions">
+                        <button className="clear-button" onClick={clearFilters}>Clear Filters</button>
+                        <button className="close-button" onClick={toggleFilterPopup}>Close</button>
+                    </div>
                 </div>
             )}
 
