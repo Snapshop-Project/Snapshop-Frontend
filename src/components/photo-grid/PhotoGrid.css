@@ -1,10 +1,10 @@
 .photo-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr)); /* Set min width to 450px for larger items */
-    gap: 30px; /* Increase gap for more spacing between large items */
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); /* Larger min width for bigger images */
+    gap: 25px; /* Increase gap for larger images */
     margin: 20px auto;
     max-width: 100%;
-    padding: 0 20px;
+    padding: 0 20px; /* Add padding around the grid */
 }
 
 .photo-item {
@@ -12,8 +12,8 @@
     width: 100%;
     padding-bottom: 100%; /* Square aspect ratio */
     overflow: hidden;
-    border-radius: 12px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    border-radius: 12px; /* Slightly larger rounding for bigger images */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Enhanced shadow for larger images */
 }
 
 .photo-item img {
