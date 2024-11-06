@@ -1,0 +1,14 @@
+.cart-main-content {
+  display: flex;
+  flex: 1;
+  margin-top: 100px;
+  margin-left: 70px;
+}
+
+.cart-content-area {
+  display: flex;
+  justify-content: space-around;
+  margin: 30px;
+  flex: 1;
+  background-color: #ffffff;
+}

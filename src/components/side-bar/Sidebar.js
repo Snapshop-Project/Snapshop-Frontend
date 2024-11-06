@@ -12,7 +12,7 @@ const Sidebar = () => {
         <FaUser size={42} />
       </div>
       <div className="divider"></div>
-      <div className="sidebar-icon">
+      <div className="sidebar-icon" onClick={() => navigate('/sales')}>
         <FaDollarSign size={42} />
       </div>
       <div className="divider"></div>
