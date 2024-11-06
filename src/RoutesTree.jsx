@@ -12,7 +12,7 @@ const RoutesTree = () => {
     <Routes>
       <Route path="/" element={<Browser />} />
       <Route path="/cart" element={<Cart />} />
-            <Route path="/profile" element={<ProfilePage />} />
+      <Route path="/profile" element={<ProfilePage />} />
       <Route path="/picture/:id" element={<PicturePage />} /> {/* Route for PicturePage */}
     </Routes>
   );
