@@ -124,7 +124,7 @@ const SearchBarr = () => {
 
                     <div className="filter-actions">
                         <button className="clear-button" onClick={clearFilters}>Clear Filters</button>
-                        <button className="close-button" onClick={toggleFilterPopup}>Close</button>
+                        <button className="close-button2" onClick={toggleFilterPopup}>Close</button>
                     </div>
                 </div>
             )}
