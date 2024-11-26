@@ -1,6 +1,6 @@
 // import logo from './logo.svg';
 import Header from '../../components/main-header/Header.js';
-import Sidebar from '../../components/side-bar/Sidebar.js';
+// import Sidebar from '../../components/side-bar/Sidebar.js';
 import SearchBarr from '../../components/search-bar/SearchBarr.js';
 import PhotoGrid from '../../components/photo-grid/PhotoGrid.js';
 import './styles.css'
@@ -13,7 +13,7 @@ function Browser() {
 
       <div className="main-content">
         {/* Sidebar on the left */}
-        <Sidebar />
+        {/* <Sidebar /> */}
 
         {/* Main content area */}
         <div className="content-area">
@@ -27,22 +27,7 @@ function Browser() {
       </div>
     </div>
   );
-        
-        
-       {/* <header className="App-header">
-         <img src={logo} className="App-logo" alt="logo" />
-         <p>
-           Edit <code>src/App.js</code> and save to reload.
-         </p>
-         <a */}
-           {/* className="App-link"
-           href="https://reactjs.org"
-           target="_blank"
-           rel="noopener noreferrer"
-         >
-           Learn React
-         </a> */}
-       {/* </header> */}
+
     
 }
 

@@ -41,7 +41,7 @@
     display: flex;
     flex: 1;
     margin-top: 100px; /* Offset for header height */
-    margin-left: 70px; /* Offset for sidebar width */
+    /*margin-left: 70px; /* Offset for sidebar width */
   }
   
   .content-area {

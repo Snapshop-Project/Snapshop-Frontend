@@ -1,6 +1,6 @@
 import React from 'react';
 import Header from '../../components/main-header/Header.js';
-import Sidebar from '../../components/side-bar/Sidebar.js';
+// import Sidebar from '../../components/side-bar/Sidebar.js';
 import ProfileHeader from '../../components/profile-header/ProfileHeader';
 import ProfileAlbum from '../../components/profile-album/ProfileAlbum';
 import './ProfilePage.css';
@@ -25,7 +25,7 @@ function ProfilePage() {
     <div className="profile-page-container">
       <Header />
       <div className="profile-main-content-page">
-        <Sidebar />
+        {/* <Sidebar /> */}
         <div className="profile-content-area-page">
           <ProfileHeader {...profileInfo} />
           <div className="profile-albums-page">

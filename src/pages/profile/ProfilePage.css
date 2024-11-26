@@ -14,7 +14,7 @@
   flex: 1;
   flex-direction: column;
   display: flex;
-  margin-left: 70px;
+  /* margin-left: 70px; */
   align-items: center;
   margin-top: 10px;
 }
