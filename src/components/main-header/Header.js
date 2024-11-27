@@ -12,7 +12,7 @@ const Header = () => {
       <div className="header-content" >
         <div className="icon-container">
           <div className="header-icon" onClick={() => navigate('/')} style={{ color: location.pathname === '/' ? '#b0b0b0' : 'white' }}>
-              <FaHome size={52} />
+              <FaHome size={54}/>
             </div>
         </div>
         {/* Centered logo as home button */}
