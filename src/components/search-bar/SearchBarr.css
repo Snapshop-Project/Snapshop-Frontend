@@ -77,12 +77,12 @@
 
 .filter-popup {
     position: absolute;
-    top: 205px; /* Adjust based on filter button position */
-    right: 10px;
-    width: 205px;
+    top: 212px; /* Adjust based on filter button position */
+    right: 16px;
+    width: 200px;
     padding: 20px;
     background-color: #ffffff;
-    box-shadow: -6px -1px 8px rgba(0, 0, 0, 0.135);
+    box-shadow: 0px 4px 8px 7px rgba(0, 0, 0, 0.135);
     border-radius: 8px;
     z-index: 10;
 }
@@ -118,6 +118,10 @@
     border-radius: 5px;
     cursor: pointer;
     font-weight: bold; /* Makes the text bold */
+}
+
+.radio-gap {
+    width: 5px;
 }
 
 .color-options {
@@ -196,3 +200,4 @@
 .close-button2:hover {
     background-color: rgb(223, 112, 43); /* Darker green on hover */
 }
+

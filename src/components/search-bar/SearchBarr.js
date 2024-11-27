@@ -4,52 +4,47 @@ import React, { useState } from 'react';
 import { FaSearch, FaFilter } from 'react-icons/fa'; // Import the search icon
 import './SearchBarr.css';
 
-const SearchBarr = () => {
+const SearchBarr = ({ filters, setFilters }) => {
     const [isFilterOpen, setIsFilterOpen] = useState(false);
-    const [activeFilters, setActiveFilters] = useState({
-        people: '',
-        orientation: '',
-        size: '',
-        color: '',
-    });
-    const colors = ["#FF0000", "#03c900", "#0000FF", "#fce703", "#9447ff" ,"#634325", "#ff7b00" ,"#FF00FF", "#00FFFF", "#FFFFFF", "#858585" , "#000000"];
 
     const toggleFilterPopup = () => {
-        if (isFilterOpen) {
-            // Reset filters when closing the popup
-            // setActiveFilters({
-            //     people: false,
-            //     orientation: '',
-            //     size: '',
-            //     color: '',
-            // });
-        }
         setIsFilterOpen(!isFilterOpen);
     };
 
+    // const [activeFilters, setActiveFilters] = useState({
+    //     people: '',
+    //     orientation: '',
+    //     size: '',
+    //     color: '',
+    // });
+    const colors = ["#FF0000", "#03c900", "#0000FF", "#fce703", "#9447ff" ,"#634325", "#ff7b00" ,"#FF00FF", "#00FFFF", "#FFFFFF", "#858585" , "#000000"];
+
+    
+
     const handleFilterChange = (category, value) => {
-        setActiveFilters((prev) => ({
-            ...prev,
-            [category]: value,
-        }));
+        setFilters((prev) => {
+            const updatedFilters = { ...prev, [category]: value };
+            console.log(updatedFilters); // Debug: check updated filters
+            return updatedFilters;
+        });
     };
 
     const clearFilters = () => {
         // Reset active filters when clear filters is clicked
-        setActiveFilters({
+        setFilters({
             people: '',
             orientation: '',
             size: '',
-            color: '',
+            // color: '',
         });
     };
 
     const filterCount = (() => {
         let count = 0;
-        if (activeFilters.people) count += 1;
-        if (activeFilters.orientation) count += 1;
-        if (activeFilters.size) count += 1;
-        if (activeFilters.color) count += 1;
+        if (filters.people) count += 1;
+        if (filters.orientation) count += 1;
+        if (filters.size) count += 1;
+        // if (filters.color) count += 1;
         return Math.min(count, 4);
     })();
 
@@ -73,39 +68,43 @@ const SearchBarr = () => {
                     <h4>Filter Options</h4>
                     <h5>People</h5>
                     <label>
-                        <input type="radio" name="people-filter" value="people" onChange={() => handleFilterChange('people', 'people')} checked={activeFilters.people === 'people'}/>
-                        People
+                        <input type="radio" name="people-filter" value="people" onChange={() => handleFilterChange('people', 'people')} checked={filters.people === 'people'}/>
+                        With People
                     </label>
+                    <div className="radio-gap"></div>
                     <label>
-                        <input type="radio" name="people-filter" value="no-people" onChange={() => handleFilterChange('people', 'no-people')} checked={activeFilters.people === 'no-people'}/>
-                        No People
+                        <input type="radio" name="people-filter" value="no-people" onChange={() => handleFilterChange('people', 'no-people')} checked={filters.people === 'no-people'}/>
+                        Without People
                     </label>
 
                     <h5>Orientation</h5>
                     <label>
-                        <input type="radio" name="orientation-filter" value="vertical" onChange={() => handleFilterChange('orientation', 'vertical')} checked={activeFilters.orientation === 'vertical'}/>
+                        <input type="radio" name="orientation-filter" value="vertical" onChange={() => handleFilterChange('orientation', 'vertical')} checked={filters.orientation === 'vertical'}/>
                         Vertical
                     </label>
+                    <div className="radio-gap"></div>
                     <label>
-                        <input type="radio" name="orientation-filter" value="horizontal" onChange={() => handleFilterChange('orientation', 'horizontal')} checked={activeFilters.orientation === 'horizontal'}/>
+                        <input type="radio" name="orientation-filter" value="horizontal" onChange={() => handleFilterChange('orientation', 'horizontal')} checked={filters.orientation === 'horizontal'}/>
                         Horizontal
                     </label>
 
-                    <h5>Size</h5>
+                    <h5>Resolution Size</h5>
                     <label>
-                        <input type="radio" name="size-filter" value="small" onChange={() => handleFilterChange('size', 'small')} checked={activeFilters.size === 'small'}/>
-                        Small
+                        <input type="radio" name="size-filter" value="small" onChange={() => handleFilterChange('size', 'small')} checked={filters.size === 'small'}/>
+                        Small ({'<'}= 1 MP)
                     </label>
+                    <div className="radio-gap"></div>
                     <label>
-                        <input type="radio" name="size-filter" value="medium" onChange={() => handleFilterChange('size', 'medium')} checked={activeFilters.size === 'medium'}/>
-                        Medium
-                    </label>
+                        <input type="radio" name="size-filter" value="medium" onChange={() => handleFilterChange('size', 'medium')} checked={filters.size === 'medium'}/>
+                        Medium ({'<'}= 6 MP)
+                    </label> 
+                    <div className="radio-gap"></div>
                     <label>
-                        <input type="radio" name="size-filter" value="large" onChange={() => handleFilterChange('size', 'large')} checked={activeFilters.size === 'large'}/>
+                        <input type="radio" name="size-filter" value="large" onChange={() => handleFilterChange('size', 'large')} checked={filters.size === 'large'}/>
                         Large
                     </label>
 
-                    <h5>Color</h5>
+                    {/* <h5>Color</h5>
                     <div className="color-options">
                     {colors.map((color, index) => (
                         <button
@@ -120,7 +119,7 @@ const SearchBarr = () => {
                         // aria-label={`Filter by color ${color}`}
                         />
                     ))}
-                    </div>
+                    </div> */}
 
                     <div className="filter-actions">
                         <button className="clear-button" onClick={clearFilters}>Clear Filters</button>
