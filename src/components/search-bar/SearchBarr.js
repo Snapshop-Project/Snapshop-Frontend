@@ -1,7 +1,7 @@
 // src/components/SearchBar.js
 
 import React, { useState } from 'react';
-import { FaSearch, FaFilter } from 'react-icons/fa'; // Import the search icon
+import { FaSearch, FaFilter, FaTimes } from 'react-icons/fa'; // Import the search icon
 import './SearchBarr.css';
 
 const SearchBarr = ({ filters, setFilters, searchQuery, setSearchQuery }) => {
@@ -26,11 +26,16 @@ const SearchBarr = ({ filters, setFilters, searchQuery, setSearchQuery }) => {
 
     const handleFilterChange = (category, value) => {
         setFilters((prev) => {
-            const updatedFilters = { ...prev, [category]: value };
-            console.log(updatedFilters); // Debug: check updated filters
-            return updatedFilters;
+            // If the current value is already selected, remove it
+            if (prev[category] === value) {
+                return { ...prev, [category]: '' }; // Clear the filter for the category
+            }
+            // Otherwise, set the selected value
+            return { ...prev, [category]: value };
         });
     };
+
+
 
     const clearFilters = () => {
         // Reset active filters when clear filters is clicked
@@ -48,13 +53,22 @@ const SearchBarr = ({ filters, setFilters, searchQuery, setSearchQuery }) => {
         if (filters.orientation) count += 1;
         if (filters.size) count += 1;
         // if (filters.color) count += 1;
-        return Math.min(count, 4);
+        return Math.min(count, 3);
     })();
 
     const handleKeyDown = (event) => {
         if (event.key === 'Enter') {
             setSearchQuery(inputValue.trim()); // Trigger search with trimmed value
         }
+    };
+    
+    const handleSearchSubmit = () => {
+        setSearchQuery(inputValue.trim()); // Update the search query state
+    };
+
+    const clearSearch = () => {
+        setInputValue(''); // Clear the input field
+        setSearchQuery(''); // Reset the search query
     };
 
     return (
@@ -67,7 +81,12 @@ const SearchBarr = ({ filters, setFilters, searchQuery, setSearchQuery }) => {
                     onChange={(e) => setInputValue(e.target.value)}
                     onKeyDown={handleKeyDown} // Listen for Enter key
                 />
-                <FaSearch className="search-icon" />
+
+                {searchQuery ? (
+                    <FaTimes className="x-icon" onClick={clearSearch} /> // Show "X" if a search query exists
+                ) : (
+                    <FaSearch className="search-icon" onClick={handleSearchSubmit} /> // Show search icon otherwise
+                )}
             </div>
             <div className="filter-button-wrapper">
                 <button className="filter-button" onClick={toggleFilterPopup}>
@@ -82,7 +101,7 @@ const SearchBarr = ({ filters, setFilters, searchQuery, setSearchQuery }) => {
                 <div className="filter-popup">
                     <h4>Filter Options</h4>
                     <h5>People</h5>
-                    <label>
+                    {/* <label>
                         <input type="radio" name="people-filter" value="people" onChange={() => handleFilterChange('people', 'people')} checked={filters.people === 'people'}/>
                         With People
                     </label>
@@ -90,10 +109,24 @@ const SearchBarr = ({ filters, setFilters, searchQuery, setSearchQuery }) => {
                     <label>
                         <input type="radio" name="people-filter" value="no-people" onChange={() => handleFilterChange('people', 'no-people')} checked={filters.people === 'no-people'}/>
                         Without People
-                    </label>
+                    </label> */}
+                    <div className="filter-buttons">
+                        <button
+                            className={`filter-option ${filters.people === 'people' ? 'active' : ''}`}
+                            onClick={() => handleFilterChange('people', 'people')}
+                        >
+                            <span className="filter-title">With People</span>
+                        </button>
+                        <button
+                            className={`filter-option ${filters.people === 'no-people' ? 'active' : ''}`}
+                            onClick={() => handleFilterChange('people', 'no-people')}
+                        >
+                            <span className="filter-title">Without People</span>
+                        </button>
+                    </div>
 
                     <h5>Orientation</h5>
-                    <label>
+                    {/* <label>
                         <input type="radio" name="orientation-filter" value="vertical" onChange={() => handleFilterChange('orientation', 'vertical')} checked={filters.orientation === 'vertical'}/>
                         Vertical
                     </label>
@@ -101,10 +134,25 @@ const SearchBarr = ({ filters, setFilters, searchQuery, setSearchQuery }) => {
                     <label>
                         <input type="radio" name="orientation-filter" value="horizontal" onChange={() => handleFilterChange('orientation', 'horizontal')} checked={filters.orientation === 'horizontal'}/>
                         Horizontal
-                    </label>
+                    </label> */}
+
+                    <div className="filter-buttons">
+                        <button
+                            className={`filter-option ${filters.orientation === 'vertical' ? 'active' : ''}`}
+                            onClick={() => handleFilterChange('orientation', 'vertical')}
+                        >
+                            <span className="filter-title">Vertical</span>
+                        </button>
+                        <button
+                            className={`filter-option ${filters.orientation === 'horizontal' ? 'active' : ''}`}
+                            onClick={() => handleFilterChange('orientation', 'horizontal')}
+                        >
+                            <span className="filter-title">Horizontal</span>
+                        </button>
+                    </div>
 
                     <h5>Resolution Size</h5>
-                    <label>
+                    {/* <label>
                         <input type="radio" name="size-filter" value="small" onChange={() => handleFilterChange('size', 'small')} checked={filters.size === 'small'}/>
                         Small ({'<'}= 1 MP)
                     </label>
@@ -117,7 +165,31 @@ const SearchBarr = ({ filters, setFilters, searchQuery, setSearchQuery }) => {
                     <label>
                         <input type="radio" name="size-filter" value="large" onChange={() => handleFilterChange('size', 'large')} checked={filters.size === 'large'}/>
                         Large
-                    </label>
+                    </label> */}
+                    <div className="filter-buttons">
+                        <button
+                            className={`filter-option ${filters.size === 'small' ? 'active' : ''}`}
+                            onClick={() => handleFilterChange('size', 'small')}
+                        >
+                            <span className="filter-title">Small</span>
+                            <span className="filter-subtitle">({`<= 1 MP`})</span>
+                        </button>
+                        <button
+                            className={`filter-option ${filters.size === 'medium' ? 'active' : ''}`}
+                            onClick={() => handleFilterChange('size', 'medium')}
+                        >
+                            <span className="filter-title">Medium</span>
+                            <span className="filter-subtitle">({`<= 6 MP`})</span>
+
+                        </button>
+                        <button
+                            className={`filter-option ${filters.size === 'large' ? 'active' : ''}`}
+                            onClick={() => handleFilterChange('size', 'large')}
+                        >
+                            <span className="filter-title">Large</span>
+
+                        </button>
+                    </div>
 
                     {/* <h5>Color</h5>
                     <div className="color-options">
