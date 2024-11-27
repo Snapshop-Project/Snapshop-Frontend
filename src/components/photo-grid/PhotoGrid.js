@@ -53,7 +53,8 @@ const applyFilters = (images, filters = {}, searchQuery) => {
             const lowerCaseQuery = sanitizedQuery.toLowerCase();
             matchesSearch =
                 image.description.toLowerCase().includes(lowerCaseQuery) ||
-                image.title.toLowerCase().includes(lowerCaseQuery);
+                image.title.toLowerCase().includes(lowerCaseQuery) ||
+                image.summary.toLowerCase().includes(lowerCaseQuery);
         }
 
         // Include the image only if it matches all specified filters
