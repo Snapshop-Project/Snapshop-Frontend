@@ -42,7 +42,7 @@ function PicturePage() {
             <div className="main-content">
                 {/* <Sidebar /> */}
                 <div className="content-area">
-                    <SearchBarr />
+                    {/* <SearchBarr /> */}
                     <div className="picture-page-full">
                         <div className="image-container">
                             <img src={image.src} alt={image.title} className={`full-image ${image.id}`} />
