@@ -61,7 +61,7 @@ function PicturePage() {
                         <div className="details-sidebar">
                             <button className="close-button" onClick={() => navigate(-1)}>×</button>
                             <div className="profile-info">
-                                <img src="/logo.jpg" alt="Profile" className="profile-picture" />
+                                <img src="/BlankProfile.webp" alt="Profile" className="profile-picture" />
                                 <span className="profile-name">{image.profile.name}</span>
                             </div>
                             <h2 className="image-title">{image.title}</h2>
