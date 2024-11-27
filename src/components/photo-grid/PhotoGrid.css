@@ -25,3 +25,60 @@
     object-fit: cover;
     border-radius: 12px;
 }
+
+/* Overlay */
+.photo-item::after {
+    content: ""; /* Empty content for overlay */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Half-transparent gray */
+    opacity: 0; /* Start invisible */
+    transition: opacity 0.3s ease; /* Smooth fade-in effect */
+    border-radius: 12px;
+}
+
+.photo-item:hover::after {
+    opacity: 1; /* Show overlay on hover */
+}
+
+/* Text on hover */
+.photo-item .photo-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    opacity: 0; /* Start invisible */
+    transition: opacity 0.3s ease; /* Smooth fade-in effect */
+    z-index: 2; /* Ensure text is above the overlay */
+}
+
+.photo-item .title {
+    font-size: 26px; /* Adjust font size as needed */
+    font-weight: bold;
+    color: white;
+}
+
+.photo-item .price {
+    font-size: 20px; /* Adjust font size as needed */
+    font-weight: bold;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.photo-item .resolutions {
+    font-size: 13px; /* Adjust font size as needed */
+    font-weight: bold;
+    color: white;
+
+}
+
+.photo-item:hover .photo-text {
+    opacity: 1; /* Show text on hover */
+}
+
