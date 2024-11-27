@@ -4,8 +4,9 @@ import React, { useState } from 'react';
 import { FaSearch, FaFilter } from 'react-icons/fa'; // Import the search icon
 import './SearchBarr.css';
 
-const SearchBarr = ({ filters, setFilters }) => {
+const SearchBarr = ({ filters, setFilters, searchQuery, setSearchQuery }) => {
     const [isFilterOpen, setIsFilterOpen] = useState(false);
+    const [inputValue, setInputValue] = useState('');
 
     const toggleFilterPopup = () => {
         setIsFilterOpen(!isFilterOpen);
@@ -19,7 +20,9 @@ const SearchBarr = ({ filters, setFilters }) => {
     // });
     const colors = ["#FF0000", "#03c900", "#0000FF", "#fce703", "#9447ff" ,"#634325", "#ff7b00" ,"#FF00FF", "#00FFFF", "#FFFFFF", "#858585" , "#000000"];
 
-    
+    const handleSearchChange = (e) => {
+        setSearchQuery(e.target.value);
+    };
 
     const handleFilterChange = (category, value) => {
         setFilters((prev) => {
@@ -48,10 +51,22 @@ const SearchBarr = ({ filters, setFilters }) => {
         return Math.min(count, 4);
     })();
 
+    const handleKeyDown = (event) => {
+        if (event.key === 'Enter') {
+            setSearchQuery(inputValue.trim()); // Trigger search with trimmed value
+        }
+    };
+
     return (
         <div className="search-container">
             <div className="search-bar">
-                <input type="text" placeholder="Search..." />
+                <input
+                    type="text"
+                    placeholder="Search..."
+                    value={inputValue}
+                    onChange={(e) => setInputValue(e.target.value)}
+                    onKeyDown={handleKeyDown} // Listen for Enter key
+                />
                 <FaSearch className="search-icon" />
             </div>
             <div className="filter-button-wrapper">

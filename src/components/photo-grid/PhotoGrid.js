@@ -5,16 +5,16 @@ import './PhotoGrid.css';
 
 
 const images = [
-    { id: 'cave', src: '/ExampleImages/Cave.jpg', title: 'The one that got away', description: 'A scenic cave by the water at sunset.', summary: 'A beautiful cave view, capturing the essence of tranquility by the water.', stockId: 'STK-00001', price: 10.99, profile: { name: 'John Doe' }, formats: ['8256 x 3174 JPG', '4000 x 2000 JPG'], orientation: 'horizontal', people: 'no-people', resolution: [728, 410] },
-    { id: 'cityscape', src: '/ExampleImages/Cityscape.jpg', title: 'Sunset', description: 'A bustling cityscape with the sun setting between buildings.', summary: 'Great for urban explorers, this captures city life.', stockId: 'STK-00002', price: 15.99, profile: { name: 'Jane Smith' }, formats: ['6000 x 4000 JPG', '1920 x 1080 JPG'], orientation: 'horizontal', people: 'no-people', resolution: [960, 641] },
-    { id: 'animal', src: '/ExampleImages/Animal.jpg', title: 'Wildlife', description: 'A wild animal captured in its natural habitat.', summary: 'A true moment of nature.', stockId: 'STK-00003', price: 14.99, profile: { name: 'Alice Johnson' }, formats: ['5000 x 3500 JPG', '2000 x 1500 JPG'], orientation: 'horizontal', people: 'no-people', resolution: [1080, 610] },
-    { id: 'portrait', src: '/ExampleImages/Portrait.jpg', title: 'Jumping', description: 'A black and white portrait with artistic effects.', summary: 'Perfect for artistic settings.', stockId: 'STK-00004', price: 8.99, profile: { name: 'Chris Evans' }, formats: ['3000 x 3000 JPG', '1200 x 1200 JPG'], orientation: 'vertical', people: 'people', resolution: [612, 612] },
-    { id: 'pinkflowers', src: '/ExampleImages/PinkFlowers.jpg', title: 'Pink Blooms', description: 'Beautiful pink flowers in bloom.', summary: 'Ideal for spring decor.', stockId: 'STK-00005', price: 11.99, profile: { name: 'Emily Brown' }, formats: ['4000 x 3000 JPG', '1600 x 1200 JPG'], orientation: 'horizontal', people: 'no-people', resolution: [1024, 610] },
-    { id: 'stairs', src: '/ExampleImages/Stairs.jpg', title: 'Spiral', description: 'A mesmerizing spiral staircase.', summary: 'For architecture enthusiasts.', stockId: 'STK-00006', price: 12.99, profile: { name: 'David Smith' }, formats: ['3500 x 3500 JPG', '1400 x 1400 JPG'], orientation: 'horizontal', people: 'no-people', resolution: [2000, 1571] },
-    { id: 'turtle', src: '/ExampleImages/Turtle.jpg', title: 'Turtle', description: 'A turtle in a lush green environment.', summary: 'A unique view of wildlife.', stockId: 'STK-00007', price: 13.99, profile: { name: 'Sophia Lee' }, formats: ['3000 x 2000 JPG', '1200 x 800 JPG'], orientation: 'vertical', people: 'no-people', resolution: [900, 900] },
-    { id: 'wedding', src: '/ExampleImages/Wedding.jpg', title: 'Wedding Day', description: 'A couple sharing a precious moment on their wedding day.', summary: 'A beautiful moment captured.', stockId: 'STK-00008', price: 18.99, profile: { name: 'Mark Taylor' }, formats: ['5000 x 3333 JPG', '1600 x 1067 JPG'], orientation: 'horizontal', people: 'people', resolution: [960, 640] },
-    { id: 'redpanda', src: '/ExampleImages/RedPanda.jpg', title: 'Red Panda', description: 'An adorable red panda relaxing on a branch.', summary: 'A favorite for animal lovers.', stockId: 'STK-00009', price: 16.99, profile: { name: 'Sarah Connor' }, formats: ['3000 x 2000 JPG', '1200 x 800 JPG'], orientation: 'vertical', people: 'no-people', resolution: [728, 1099] },
-    { id: 'sunset', src: '/ExampleImages/Sunset.jpg', title: 'Golden Sunset', description: 'A beautiful sunset over a vast landscape.', summary: 'Perfect for any room decor.', stockId: 'STK-00010', price: 19.99, profile: { name: 'Tom Hardy' }, formats: ['6000 x 4000 JPG', '1920 x 1280 JPG'], orientation: 'horizontal', people: 'no-people', resolution: [1280, 854] },
+    { id: 'cave', src: '/ExampleImages/Cave.jpg', title: 'The one that got away', description: 'A scenic cave by the water at sunset.', summary: 'A beautiful cave view, capturing the essence of tranquility by the water.', stockId: 'STK-00001', price: 10.99, profile: { name: 'John Doe' }, formats: ['728 x 410 JPG'], orientation: 'horizontal', people: 'no-people', resolution: [728, 410] },
+    { id: 'cityscape', src: '/ExampleImages/Cityscape.jpg', title: 'Sunset', description: 'A bustling cityscape with the sun setting between buildings.', summary: 'Great for urban explorers, this captures city life.', stockId: 'STK-00002', price: 15.99, profile: { name: 'Jane Smith' }, formats: ['960 x 641 JPG'], orientation: 'horizontal', people: 'no-people', resolution: [960, 641] },
+    { id: 'animal', src: '/ExampleImages/Animal.jpg', title: 'Wildlife', description: 'A wild animal captured in its natural habitat.', summary: 'A true moment of nature.', stockId: 'STK-00003', price: 14.99, profile: { name: 'Alice Johnson' }, formats: ['1080 x 610 JPG'], orientation: 'horizontal', people: 'no-people', resolution: [1080, 610] },
+    { id: 'portrait', src: '/ExampleImages/Portrait.jpg', title: 'Jumping', description: 'A black and white portrait with artistic effects.', summary: 'Perfect for artistic settings.', stockId: 'STK-00004', price: 8.99, profile: { name: 'Chris Evans' }, formats: ['612 x 612 JPG'], orientation: 'vertical', people: 'people', resolution: [612, 612] },
+    { id: 'pinkflowers', src: '/ExampleImages/PinkFlowers.jpg', title: 'Pink Blooms', description: 'Beautiful pink flowers in bloom.', summary: 'Ideal for spring decor.', stockId: 'STK-00005', price: 11.99, profile: { name: 'Emily Brown' }, formats: ['1024 x 610 JPG'], orientation: 'horizontal', people: 'no-people', resolution: [1024, 610] },
+    { id: 'stairs', src: '/ExampleImages/Stairs.jpg', title: 'Spiral', description: 'A mesmerizing spiral staircase.', summary: 'For architecture enthusiasts.', stockId: 'STK-00006', price: 12.99, profile: { name: 'David Smith' }, formats: ['2000 x 1571 JPG'], orientation: 'horizontal', people: 'no-people', resolution: [2000, 1571] },
+    { id: 'turtle', src: '/ExampleImages/Turtle.jpg', title: 'Turtle', description: 'A turtle in a lush green environment.', summary: 'A unique view of wildlife.', stockId: 'STK-00007', price: 13.99, profile: { name: 'Sophia Lee' }, formats: ['900 x 900 JPG'], orientation: 'vertical', people: 'no-people', resolution: [900, 900] },
+    { id: 'wedding', src: '/ExampleImages/Wedding.jpg', title: 'Wedding Day', description: 'A couple sharing a precious moment on their wedding day.', summary: 'A beautiful moment captured.', stockId: 'STK-00008', price: 18.99, profile: { name: 'Mark Taylor' }, formats: ['960 x 640 JPG'], orientation: 'horizontal', people: 'people', resolution: [960, 640] },
+    { id: 'redpanda', src: '/ExampleImages/RedPanda.jpg', title: 'Red Panda', description: 'An adorable red panda relaxing on a branch.', summary: 'A favorite for animal lovers.', stockId: 'STK-00009', price: 16.99, profile: { name: 'Sarah Connor' }, formats: ['728 x 1099 JPG'], orientation: 'vertical', people: 'no-people', resolution: [728, 1099] },
+    { id: 'sunset', src: '/ExampleImages/Sunset.jpg', title: 'Golden Sunset', description: 'A beautiful sunset over a vast landscape.', summary: 'Perfect for any room decor.', stockId: 'STK-00010', price: 19.99, profile: { name: 'Tom Hardy' }, formats: ['1280 x 854 JPG'], orientation: 'horizontal', people: 'no-people', resolution: [1280, 854] },
 ];
 
 const classifyResolution = (resolution) => {
@@ -26,11 +26,13 @@ const classifyResolution = (resolution) => {
     return 'large';
 };
 
-const applyFilters = (images, filters = {}) => {
+const applyFilters = (images, filters = {}, searchQuery) => {
+    const sanitizedQuery = String(searchQuery || '').trim();
     return images.filter((image) => {
         let matchesOrientation = true;
         let matchesPeople = true;
         let matchesResolution = true;
+        let matchesSearch = true;
 
         // Check the orientation filter if specified
         if (filters.orientation) {
@@ -47,14 +49,21 @@ const applyFilters = (images, filters = {}) => {
             matchesResolution = resolutionCategory === filters.size;
         }
 
+        if (sanitizedQuery) {
+            const lowerCaseQuery = sanitizedQuery.toLowerCase();
+            matchesSearch =
+                image.description.toLowerCase().includes(lowerCaseQuery) ||
+                image.title.toLowerCase().includes(lowerCaseQuery);
+        }
+
         // Include the image only if it matches all specified filters
-        return matchesOrientation && matchesPeople && matchesResolution;
+        return matchesSearch && matchesOrientation && matchesPeople && matchesResolution;
     });
 };
 
-const PhotoGrid = ({ filters }) => {
+const PhotoGrid = ({ filters, searchQuery }) => {
     console.log(filters); // Debug: check filters
-    const filteredImages = applyFilters(images, filters);
+    const filteredImages = applyFilters(images, filters, searchQuery);
     return (
         <div className="photo-grid">
             {filteredImages.map((image) => (
@@ -64,8 +73,8 @@ const PhotoGrid = ({ filters }) => {
                         <div class="photo-text">
                             <div class="title">{image.title}</div>
                             <div class="price">${image.price}</div>
-                            <div class="resolutions">{image.formats[0]},</div>
-                            <div class="resolutions">{image.formats[1]}</div>
+                            <div class="resolutions">{image.formats[0]}</div>
+                            {/* <div class="resolutions">{image.formats[1]}</div> */}
                         </div>
                     </div>
                 </Link>

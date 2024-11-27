@@ -13,6 +13,8 @@ function Browser() {
     size: '',
     // color: '',
   });
+
+  const [searchQuery, setSearchQuery] = useState('');
   
   return (
     <div className="app-container">
@@ -29,8 +31,13 @@ function Browser() {
           {/* <div className="browse-header">
             <h1>BROWSE</h1>
           </div> */}
-          <SearchBarr filters={filters} setFilters={setFilters} />
-          <PhotoGrid filters={filters} />
+          <SearchBarr
+              filters={filters}
+              setFilters={setFilters}
+              searchQuery={searchQuery}
+              setSearchQuery={setSearchQuery}
+          />
+          <PhotoGrid filters={filters} searchQuery={searchQuery} />
         </div>
       </div>
     </div>
