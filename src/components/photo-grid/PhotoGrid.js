@@ -73,6 +73,7 @@ const PhotoGrid = ({ filters, searchQuery }) => {
                         <img src={image.src} alt={`Photo of ${image.id}`} onError={(e) => e.target.style.display = 'none'} />
                         <div class="photo-text">
                             <div class="title">{image.title}</div>
+                            <div className="name">{image.profile.name}</div>
                             <div class="price">${image.price}</div>
                             <div class="resolutions">{image.formats[0]}</div>
                             {/* <div class="resolutions">{image.formats[1]}</div> */}
