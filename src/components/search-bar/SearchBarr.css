@@ -4,8 +4,18 @@
     align-items: center; /* Align items vertically in the center */
     justify-content: space-between; /* Space out items to center the filter button */
     width: 100%; /* Ensure the container takes the full width */
-    margin-top: 35px;
     margin-bottom: 15px;
+    flex-direction: row;
+}
+
+.search-and-filter-container {
+    display: flex;
+    align-items: center; /* Align items vertically in the center */
+    justify-content: space-between; /* Space out items to center the filter button */
+    width: 100%; /* Ensure the container takes the full width */
+    margin-top: 40px;
+    margin-bottom: 15px;
+    flex-direction: column;
 }
 
 .search-bar {
@@ -63,7 +73,6 @@
     cursor: pointer;
     padding: 8px; /* Adjust padding for the button */
     margin-left: 24px; /* Spacing between search bar and filter button */
-    margin-right: 20px;;
     border-radius: 5px; /* Optional: rounded corners for the border */
     display: flex; /* Center the icon in the button */
     align-items: center;
@@ -72,6 +81,7 @@
     width: 55px;
     margin-bottom: 15px;
     margin-right: 30px;
+    margin-top: 3px;
 }
 
 .filter-button:hover {
@@ -85,7 +95,7 @@
 
 .filter-popup {
     position: absolute;
-    top: 212px; /* Adjust based on filter button position */
+    top: 218px; /* Adjust based on filter button position */
     right: 16px;
     width: 255px;
     padding: 20px;
@@ -99,6 +109,7 @@
     margin: 0 0 10px;
     color:rgb(223, 112, 43);
     font-size: 20px;
+    text-align: center;
 }
 
 .filter-popup h5 {
@@ -107,6 +118,7 @@
     font-size: 15px;
     margin-top: 18px;
     margin-bottom: 5px;
+    text-align: center;
 }
 
 .filter-popup ul {
@@ -252,4 +264,41 @@
 
 .filter-option .filter-subtitle {
     font-size: 11px; /* Smaller size for the subtitle */
+}
+
+/* Filter Display Bar */
+.filter-display-bar {
+    display: flex;
+    flex-wrap: wrap; /* Allows the filter chips to wrap if needed */
+    gap: 10px; /* Space between filter chips */
+    width: 90%; /* Make it span the full width */
+    margin-top: -10px; /* Add spacing below the search bar */
+    padding: 5px 0; /* Optional: Add padding for a cleaner look */
+    height: 30px;
+}
+
+/* Filter Chip */
+.filter-chip {
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+    background-color: rgb(223, 112, 43);
+    color: white;
+    border-radius: 5px;
+    font-size: 16px;
+    height: 25px;
+    font-weight: bold;
+}
+
+.filter-chip .remove-filter-icon {
+    margin-left: 8px;
+    cursor: pointer;
+}
+
+.applied-label {
+    font-size: 20px;
+    color:#b0b0b0;
+    margin-top: 3.5px;
+    margin-right: 5px;
+    font-weight: bold;
 }
