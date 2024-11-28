@@ -11,7 +11,7 @@ const Header = () => {
     <header className="header">
       <div className="header-content" >
         <div className="icon-container">
-          <div className="header-icon" onClick={() => navigate('/')} style={{ color: location.pathname === '/' ? '#b0b0b0' : 'white' }}>
+          <div className="header-icon" onClick={() => navigate('/')} style={{ color: location.pathname === '/' ? '#ffcbab' : 'white' }}> 
               <FaHome size={54}/>
             </div>
         </div>
@@ -21,11 +21,11 @@ const Header = () => {
         {/*</Link> */}
         <div className="icon-container">
           {/* Profile Icon */}
-          <div className="header-icon" onClick={() => navigate('/profile')} style={{ color: location.pathname === '/profile' ? '#b0b0b0' : 'white' }}>
+          <div className="header-icon" onClick={() => navigate('/profile')} style={{ color: location.pathname === '/profile' ? '#ffcbab' : 'white' }}>
             <FaUser size={42} />
           </div>
           {/* Cart Icon */}
-          <div className="header-icon" onClick={() => navigate('/cart')} style={{ color: location.pathname === '/cart' ? '#b0b0b0' : 'white'}}>
+          <div className="header-icon" onClick={() => navigate('/cart')} style={{ color: location.pathname === '/cart' ? '#ffcbab' : 'white'}}>
             <FaShoppingCart size={42} />
           </div>
         </div>

@@ -35,7 +35,7 @@
 
 .header-icon:hover,
 .header-icon:active {
-  color: #b0b0b0 !important;  /* Color change on hover for better visual feedback */
+  color: #ffcbab !important;  /* Color change on hover for better visual feedback */
 }
 
 .logo {
