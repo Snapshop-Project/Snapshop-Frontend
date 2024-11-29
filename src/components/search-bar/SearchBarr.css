@@ -4,8 +4,18 @@
     align-items: center; /* Align items vertically in the center */
     justify-content: space-between; /* Space out items to center the filter button */
     width: 100%; /* Ensure the container takes the full width */
-    margin-top: 35px;
     margin-bottom: 15px;
+    flex-direction: row;
+}
+
+.search-and-filter-container {
+    display: flex;
+    align-items: center; /* Align items vertically in the center */
+    justify-content: space-between; /* Space out items to center the filter button */
+    width: 100%; /* Ensure the container takes the full width */
+    margin-top: 40px;
+    margin-bottom: 15px;
+    flex-direction: column;
 }
 
 .search-bar {
@@ -45,8 +55,16 @@
     font-size: 35px;
     margin-left: 8px; /* Spacing between input and icon */
     margin-right: 8px;
+    cursor: pointer;
 }
 
+.x-icon {
+    color: rgb(118, 118, 118);
+    font-size: 25px;
+    margin-left: 8px; /* Spacing between input and icon */
+    margin-right: 8px;
+    cursor: pointer;
+}
 
 
 .filter-button {
@@ -55,7 +73,6 @@
     cursor: pointer;
     padding: 8px; /* Adjust padding for the button */
     margin-left: 24px; /* Spacing between search bar and filter button */
-    margin-right: 20px;;
     border-radius: 5px; /* Optional: rounded corners for the border */
     display: flex; /* Center the icon in the button */
     align-items: center;
@@ -64,6 +81,8 @@
     width: 55px;
     margin-bottom: 15px;
     margin-right: 30px;
+    margin-top: 3px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .filter-button:hover {
@@ -77,12 +96,12 @@
 
 .filter-popup {
     position: absolute;
-    top: 205px; /* Adjust based on filter button position */
-    right: 10px;
-    width: 205px;
+    top: 218px; /* Adjust based on filter button position */
+    right: 16px;
+    width: 255px;
     padding: 20px;
     background-color: #ffffff;
-    box-shadow: -6px -1px 8px rgba(0, 0, 0, 0.135);
+    box-shadow: 0px 4px 8px 7px rgba(0, 0, 0, 0.135);
     border-radius: 8px;
     z-index: 10;
 }
@@ -91,6 +110,7 @@
     margin: 0 0 10px;
     color:rgb(223, 112, 43);
     font-size: 20px;
+    text-align: center;
 }
 
 .filter-popup h5 {
@@ -99,6 +119,7 @@
     font-size: 15px;
     margin-top: 18px;
     margin-bottom: 5px;
+    text-align: center;
 }
 
 .filter-popup ul {
@@ -118,6 +139,10 @@
     border-radius: 5px;
     cursor: pointer;
     font-weight: bold; /* Makes the text bold */
+}
+
+.radio-gap {
+    width: 5px;
 }
 
 .color-options {
@@ -150,12 +175,12 @@
 
 .filter-count-badge {
     position: absolute;
-    top: -10px;
+    top: -14px;
     right: 10px;
     background-color: rgb(242, 141, 77);
     color: rgb(255, 255, 255);
     border: 2px solid rgb(255, 255, 255);
-    font-size: 13px;
+    font-size: 20px;
     font-weight: bold;
     padding: 4px 6px;
     border-radius: 100%;
@@ -195,4 +220,93 @@
 
 .close-button2:hover {
     background-color: rgb(223, 112, 43); /* Darker green on hover */
+}
+
+.filter-buttons {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.filter-option {
+    /* padding: 10px 15px; */
+    height: 42px;
+    border: 1px solid #cacaca;
+    background-color: #ededed;
+    color: #989898 !important;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+    flex: 1;
+    text-align: center;
+    display: flex;
+    flex-direction: column; /* Stack text vertically */
+    justify-content: center; /* Center text vertically within the button */
+    align-items: center; /* Center text horizontally */
+}
+
+.filter-option:hover {
+    background-color: #d0d0d0;
+    color: white !important;;
+}
+
+.filter-option.active {
+    background-color: rgb(242, 141, 77);;
+    color: white !important;
+    border-color: rgb(242, 141, 77);;
+}
+
+.filter-option.active:hover {
+    background-color: rgb(223, 112, 43);;
+    color: white !important;
+    border-color: rgb(223, 112, 43);;
+}
+
+.filter-option .filter-title {
+    font-size: 14px; /* Adjust size of main text */
+    font-weight: bold;
+    
+}
+
+.filter-option .filter-subtitle {
+    font-size: 11px; /* Smaller size for the subtitle */
+}
+
+/* Filter Display Bar */
+.filter-display-bar {
+    display: flex;
+    flex: 1;
+    flex-wrap: wrap; /* Allows the filter chips to wrap if needed */
+    gap: 10px; /* Space between filter chips */
+    width: 90%; /* Make it span the full width */
+    margin-top: -10px; /* Add spacing below the search bar */
+    padding: 5px 0; /* Optional: Add padding for a cleaner look */
+    height: 30px;
+}
+
+/* Filter Chip */
+.filter-chip {
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+    background-color: rgb(242, 141, 77);
+    color: white;
+    border-radius: 5px;
+    font-size: 16px;
+    height: 25px;
+    font-weight: bold;
+}
+
+.filter-chip .remove-filter-icon {
+    margin-left: 8px;
+    cursor: pointer;
+}
+
+.applied-label {
+    font-size: 20px;
+    color:#898989;
+    margin-top: 3.5px;
+    margin-right: 5px;
+    font-weight: bold;
 }

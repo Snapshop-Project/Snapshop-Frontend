@@ -1,8 +1,8 @@
 .cart-main-content {
   display: flex;
   flex: 1;
-  margin-top: 100px;
-  margin-left: 70px;
+  margin-top: 130px;
+  /* margin-left: 70px; */
 }
 
 .cart-content-area {

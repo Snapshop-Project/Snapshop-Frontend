@@ -1,11 +1,22 @@
 // import logo from './logo.svg';
+import React, { useState } from 'react'; // Import useState
 import Header from '../../components/main-header/Header.js';
-import Sidebar from '../../components/side-bar/Sidebar.js';
+// import Sidebar from '../../components/side-bar/Sidebar.js';
 import SearchBarr from '../../components/search-bar/SearchBarr.js';
 import PhotoGrid from '../../components/photo-grid/PhotoGrid.js';
 import './styles.css'
 
 function Browser() {
+  const [filters, setFilters] = useState({
+    people: '',
+    orientation: '',
+    size: '',
+    fileType: '',
+    // color: '',
+  });
+
+  const [searchQuery, setSearchQuery] = useState('');
+  
   return (
     <div className="app-container">
       {/* Header at the top */}
@@ -13,7 +24,7 @@ function Browser() {
 
       <div className="main-content">
         {/* Sidebar on the left */}
-        <Sidebar />
+        {/* <Sidebar /> */}
 
         {/* Main content area */}
         <div className="content-area">
@@ -21,28 +32,18 @@ function Browser() {
           {/* <div className="browse-header">
             <h1>BROWSE</h1>
           </div> */}
-          <SearchBarr />
-          <PhotoGrid />
+          <SearchBarr
+              filters={filters}
+              setFilters={setFilters}
+              searchQuery={searchQuery}
+              setSearchQuery={setSearchQuery}
+          />
+          <PhotoGrid filters={filters} searchQuery={searchQuery} />
         </div>
       </div>
     </div>
   );
-        
-        
-       {/* <header className="App-header">
-         <img src={logo} className="App-logo" alt="logo" />
-         <p>
-           Edit <code>src/App.js</code> and save to reload.
-         </p>
-         <a */}
-           {/* className="App-link"
-           href="https://reactjs.org"
-           target="_blank"
-           rel="noopener noreferrer"
-         >
-           Learn React
-         </a> */}
-       {/* </header> */}
+
     
 }
 
