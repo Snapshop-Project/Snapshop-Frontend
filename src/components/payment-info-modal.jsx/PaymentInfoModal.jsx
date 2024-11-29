@@ -95,6 +95,7 @@ function PaymentInfoModal({ isOpen, onClose, onSave, initialData }) {
                             <label>CVV</label>
                             <input
                                 type="text"
+                                placeholder="123"
                                 value={CVV}
                                 onChange={(e) => {
                                   const value = e.target.value.replace(/[^0-9]/g, '');
