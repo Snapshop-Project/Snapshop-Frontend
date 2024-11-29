@@ -18,7 +18,7 @@ const SearchBarr = ({ filters, setFilters, searchQuery, setSearchQuery }) => {
     //     size: '',
     //     color: '',
     // });
-    const colors = ["#FF0000", "#03c900", "#0000FF", "#fce703", "#9447ff" ,"#634325", "#ff7b00" ,"#FF00FF", "#00FFFF", "#FFFFFF", "#858585" , "#000000"];
+    // const colors = ["#FF0000", "#03c900", "#0000FF", "#fce703", "#9447ff" ,"#634325", "#ff7b00" ,"#FF00FF", "#00FFFF", "#FFFFFF", "#858585" , "#000000"];
 
     const handleSearchChange = (e) => {
         setSearchQuery(e.target.value);
@@ -49,6 +49,7 @@ const SearchBarr = ({ filters, setFilters, searchQuery, setSearchQuery }) => {
             people: '',
             orientation: '',
             size: '',
+            fileType: '',
             // color: '',
         });
     };
@@ -58,8 +59,9 @@ const SearchBarr = ({ filters, setFilters, searchQuery, setSearchQuery }) => {
         if (filters.people) count += 1;
         if (filters.orientation) count += 1;
         if (filters.size) count += 1;
+        if (filters.fileType) count += 1;
         // if (filters.color) count += 1;
-        return Math.min(count, 3);
+        return Math.min(count, 4);
     })();
 
     const handleKeyDown = (event) => {
@@ -85,6 +87,9 @@ const SearchBarr = ({ filters, setFilters, searchQuery, setSearchQuery }) => {
         small: 'Small (<= 1 MP)',
         medium: 'Medium (<= 6 MP)',
         large: 'Large',
+        JPG: 'JPG',
+        PNG: 'PNG',
+        CR2: 'CR2',
         // Add more labels as needed
     };
 
@@ -209,6 +214,29 @@ const SearchBarr = ({ filters, setFilters, searchQuery, setSearchQuery }) => {
                             </button>
                         </div>
 
+                        <h5>File Type</h5>
+                        <div className="filter-buttons">
+                            <button
+                                className={`filter-option ${filters.fileType === 'JPG' ? 'active' : ''}`}
+                                onClick={() => handleFilterChange('fileType', 'JPG')}
+                            >
+                                <span className="filter-title">JPG</span>
+                            </button>
+                            <button
+                                className={`filter-option ${filters.fileType === 'PNG' ? 'active' : ''}`}
+                                onClick={() => handleFilterChange('fileType', 'PNG')}
+                            >
+                                <span className="filter-title">PNG</span>
+
+                            </button>
+                            <button
+                                className={`filter-option ${filters.fileType === 'CR2' ? 'active' : ''}`}
+                                onClick={() => handleFilterChange('fileType', 'CR2')}
+                            >
+                                <span className="filter-title">CR2</span>
+
+                            </button>
+                        </div>
                         {/* <h5>Color</h5>
                         <div className="color-options">
                         {colors.map((color, index) => (

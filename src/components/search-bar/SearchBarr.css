@@ -276,6 +276,7 @@
 /* Filter Display Bar */
 .filter-display-bar {
     display: flex;
+    flex: 1;
     flex-wrap: wrap; /* Allows the filter chips to wrap if needed */
     gap: 10px; /* Space between filter chips */
     width: 90%; /* Make it span the full width */

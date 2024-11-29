@@ -11,6 +11,7 @@ function Browser() {
     people: '',
     orientation: '',
     size: '',
+    fileType: '',
     // color: '',
   });
 
