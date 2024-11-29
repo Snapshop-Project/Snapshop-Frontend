@@ -3,8 +3,10 @@
   border: 2px solid #e5e5e5;
   padding: 20px;
   font-family: Arial, sans-serif;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
   border-radius: 8px;
+  position: fixed;
+  background-color: white;
 }
 
 .cart-summary h2 {
@@ -32,7 +34,7 @@
   padding-top: 10px;
 }
   
-.checkout-button{ 
+.checkout-button-purchase{ 
   background-color: rgb(242, 141, 77);
   color: white; 
   padding: 10px 20px; 
@@ -42,4 +44,26 @@
   font-size: 16px;
   cursor: pointer;
   border: none;
+}
+.checkout-button-purchase:disabled {
+  background-color: #e0e0e0;
+  color: #a0a0a0;
+  cursor: not-allowed;
+}
+
+.checkout-button-checkout{ 
+  background-color: rgb(242, 141, 77);
+  color: white; 
+  padding: 10px 20px; 
+  border-radius: 5px; 
+  width: 100%;
+  margin-top: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+}
+.checkout-button-checkout:disabled {
+  background-color: #e0e0e0;
+  color: #a0a0a0;
+  cursor: not-allowed;
 }
