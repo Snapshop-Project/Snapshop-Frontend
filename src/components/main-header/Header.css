@@ -1,28 +1,47 @@
-
 .header {
-    width: 100%;
-    height: 100px;
-    padding: 0.2rem;
-    background-color: rgb(242, 141, 77); 
-    box-shadow: 0 2px 4px #00000026; 
-    position: fixed; 
-    top: 0;
-    left: 0;
-    z-index: 1000; 
-  }
-  
-  .header-content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .logo-link {
-    display: flex;
-    justify-content: center;
-  }
-  
-  .logo {
-    height: 100px; /* Adjust size as needed */
-    cursor: pointer;
-  }
+  width: 100%;
+  height: 120px;
+  padding: 0.2rem;
+  background-color: rgb(242, 141, 77);
+  box-shadow: 0 2px 4px #00000026;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: center; /* Center all content horizontally */
+  align-items: center; /* Vertically center content */
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between; /* Space left and right icon containers */
+  align-items: center;
+  width: 100%; /* Ensure it spans the full width of the header */
+  /*max-width: 1200px; /* Optional: To limit the header width */
+  padding: 0 40px; /* Optional: For padding on left and right */
+}
+
+.icon-container {
+  display: flex;
+  align-items: center;
+  gap: 30px; /* Add space between icons */
+}
+
+.header-icon {
+  cursor: pointer;
+  color: white; /* Default color */
+}
+
+.header-icon:hover,
+.header-icon:active {
+  color: #854219 !important;  /* Color change on hover for better visual feedback */
+}
+
+.logo {
+  height: 100px;
+  cursor: pointer;
+  position: absolute; /* This helps to center it absolutely in the header */
+  left: 50%; /* Move the left side of the logo to the center */
+  transform: translateX(-50%); /* Offset the logo by half its width to fully center it */
+}
