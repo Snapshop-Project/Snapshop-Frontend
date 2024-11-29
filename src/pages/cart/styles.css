@@ -10,5 +10,9 @@
   justify-content: space-around;
   margin: 30px;
   flex: 1;
-  background-color: #ffffff;
+  background-color: rgb(214, 214, 214);
+}
+body {
+  margin: 0;
+  background-color: rgb(214, 214, 214);
 }
