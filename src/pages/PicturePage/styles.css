@@ -2,13 +2,13 @@
     display: flex;
     flex-direction: column;
     height: 100vh;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 .main-content {
     display: flex;
     flex: 1;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 .content-area {
@@ -16,7 +16,7 @@
     display: flex;
     flex-direction: column;
     padding: 20px;
-    overflow-y: auto;
+    /* overflow-y: auto; */
 }
 
 .picture-page-full {
@@ -85,7 +85,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 600px;
+    /* height: 600px; */
     position: relative;
 }
 
@@ -126,7 +126,7 @@
     margin-bottom: 10px;
 }
 
-.image-summary, .image-description, .stock-id {
+.image-summary, .image-description, .stock-id, .resolution-display {
     font-size: 1rem;
     color: #555;
     margin-bottom: 5px;
@@ -135,6 +135,13 @@
 .stock-id {
     margin-top: 5px;
     font-weight: 500;
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+.resolution-display {
+    font-weight: 500;
+    color: black;
 }
 
 .rating-section {
