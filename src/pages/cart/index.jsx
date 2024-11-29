@@ -1,6 +1,5 @@
 import './styles.css'
 import Header from '../../components/main-header/Header.js';
-// import Sidebar from '../../components/side-bar/Sidebar.js';
 import CartSummary from '../../components/cart-summary/CartSummary.jsx';
 import CartItemList from '../../components/cart-item-list/CartItemList.jsx';
 import Grid2 from '@mui/material/Grid2';
