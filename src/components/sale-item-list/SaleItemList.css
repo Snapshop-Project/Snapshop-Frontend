@@ -1,76 +1,65 @@
-/* Remove any container-level styling */
-.sale-grid-container {
-    padding: 0; /* Remove padding to align content */
-    background-color: transparent; /* Remove background color */
-    box-shadow: none; /* Remove shadow or border effects */
-    margin: 0; /* Remove extra margins */
-}
-
-/* Ensure the item grid aligns with the parent */
-.sales-item-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 15px; /* Add spacing between items */
-    width: 95%; /* Take full width of the parent container */
-    
-}
-
-/* Styling for individual items */
-.sales-item-card {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    border-bottom: 1px solid #ccc;
-    /* margin-right: 20px; */
-    padding: 15px;
-    width: 100%; /* Ensure it spans the container */
-}
-
-/* Remove bottom border for the last item */
-.sales-item-card:last-child {
-    border-bottom: none;
-}
-
-/* Styling for item details */
-.sales-item-img {
-    width: 150px; /* Adjust as needed */
-    height: 100px;
-    object-fit: cover;
+.sale-item-grid-container {
+    border: 2px solid #e5e5e5;
+    padding: 20px;
+    width: 900px;
+    font-family: Arial, sans-serif;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
     border-radius: 8px;
-    margin-right: 20px;
+    background-color: white;
+    margin-top: 100px;
 }
-
-.sales-item-details {
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-    justify-content: space-between;
+    
+.sale-item-grid-container h2 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    margin-top: 0px;
 }
-
-.sales-item-name {
+    
+.sale-item-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+}
+    
+.sale-item-card {
+    border: 2px solid rgb(242, 141, 77);
+    padding: 10px;
+    position: relative;
+    text-align: center;
+    font-size: 14px;
+    border-radius: 15px;
+}
+    
+.sale-item-header {
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-top: 5px;
+}
+    
+.sale-item-name {
+    font-size: 20px;
+}
+    
+.sale-item-img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border: 5px solid maroon;
+    padding: 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: brown; 
+    border-radius: 8px;
+}
+    
+.sale-item-price {
     font-size: 20px;
     font-weight: bold;
-    margin-left: auto;
-    margin-bottom: 8px;
+    margin-top: 7px;
 }
 
-.sales-item-price {
-    font-size: 14px;
-    font-weight: bold;
-    margin-left: auto;
-    align-self: flex-start;
+.sale-item-purchaser {
+    font-size: 15px;
+    margin-top: 5px;
 }
 
-.sales-item-purchaser {
-    font-size: 14px;
-    /* font-weight: bold; */
-    margin-left: auto;
-    align-self: flex-start;
-    margin-bottom: 8px;
-}
-
-/* Ensure layout consistency with other sections */
-.review-items-section {
-    margin: 0; /* Align to the parent container */
-    width: 100%; /* Stretch to fill the parent */
-}
