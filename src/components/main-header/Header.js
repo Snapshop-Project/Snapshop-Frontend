@@ -1,7 +1,7 @@
 // src/components/Header.js
 import React from 'react';
 import './Header.css'; // Optional: For styling
-import { FaUser, FaShoppingCart, FaHome } from 'react-icons/fa'; // Importing icons
+import { FaUser, FaShoppingCart, FaHome, FaDollarSign } from 'react-icons/fa'; // Importing icons
 import { useNavigate, useLocation } from 'react-router-dom';
 
 const Header = () => {
@@ -12,8 +12,11 @@ const Header = () => {
       <div className="header-content" >
         <div className="icon-container">
           <div className="header-icon" onClick={() => navigate('/')} style={{ color: location.pathname === '/' ? '#854219' : 'white' }}> 
-              <FaHome size={54}/>
-            </div>
+            <FaHome size={54}/>
+          </div>
+          <div className="header-icon" onClick={() => navigate('/sales')} style={{ color: location.pathname === '/sales' ? '#854219' : 'white' }}> 
+            <FaDollarSign size={42}/>
+          </div>
         </div>
         {/* Centered logo as home button */}
         {/*<Link to="/" className="logo-link"> */}

@@ -1,0 +1,76 @@
+/* Remove any container-level styling */
+.sale-grid-container {
+    padding: 0; /* Remove padding to align content */
+    background-color: transparent; /* Remove background color */
+    box-shadow: none; /* Remove shadow or border effects */
+    margin: 0; /* Remove extra margins */
+}
+
+/* Ensure the item grid aligns with the parent */
+.sales-item-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Add spacing between items */
+    width: 95%; /* Take full width of the parent container */
+    
+}
+
+/* Styling for individual items */
+.sales-item-card {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    border-bottom: 1px solid #ccc;
+    /* margin-right: 20px; */
+    padding: 15px;
+    width: 100%; /* Ensure it spans the container */
+}
+
+/* Remove bottom border for the last item */
+.sales-item-card:last-child {
+    border-bottom: none;
+}
+
+/* Styling for item details */
+.sales-item-img {
+    width: 150px; /* Adjust as needed */
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-right: 20px;
+}
+
+.sales-item-details {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: space-between;
+}
+
+.sales-item-name {
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: auto;
+    margin-bottom: 8px;
+}
+
+.sales-item-price {
+    font-size: 14px;
+    font-weight: bold;
+    margin-left: auto;
+    align-self: flex-start;
+}
+
+.sales-item-purchaser {
+    font-size: 14px;
+    /* font-weight: bold; */
+    margin-left: auto;
+    align-self: flex-start;
+    margin-bottom: 8px;
+}
+
+/* Ensure layout consistency with other sections */
+.review-items-section {
+    margin: 0; /* Align to the parent container */
+    width: 100%; /* Stretch to fill the parent */
+}

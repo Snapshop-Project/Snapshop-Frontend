@@ -1,0 +1,39 @@
+/* Ensure the background is grey */
+.sales-app-container {
+    background-color: rgb(214, 214, 214); /* Grey background */
+    min-height: 100vh; /* Ensures it covers the entire viewport height */
+    padding: 20px; /* Adds spacing inside the container */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+/* Main content container for the two boxes */
+.sales-main-content {
+  display: flex;
+  justify-content: space-between; /* Space between the boxes */
+  align-items: flex-start; /* Align the boxes at the top */
+  gap: 20px; /* Space between the boxes */
+  width: 90%; /* Adjusts the container width */
+  max-width: 1200px; /* Restricts maximum width */
+  margin-top: 200px;
+}
+
+/* Individual box styles */
+.sales-content-area {
+  background-color: white; /* White box background */
+  border: 1px solid #ccc; /* Light grey border */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  flex: 1; /* Makes boxes flexible */
+  min-width: 300px; /* Minimum box width */
+  padding: 20px; /* Internal spacing */
+  /* height: 300px; */
+}
+
+.sales-main-content h2 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  margin-top: 0px;
+}
