@@ -45,3 +45,15 @@
   left: 50%; /* Move the left side of the logo to the center */
   transform: translateX(-50%); /* Offset the logo by half its width to fully center it */
 }
+.login-button-header {
+  border: none;
+  color: rgb(242, 141, 77);
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-right: 20px;
+  background-color: white;
+  padding: 10px 20px; 
+  border-radius: 5px; 
+  cursor: pointer;
+}
