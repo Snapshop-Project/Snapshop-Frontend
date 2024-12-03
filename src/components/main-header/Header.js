@@ -83,7 +83,7 @@ const Header = () => {
                   className="header-dropdown-item"
                   onClick={() => {
                     setIsDropdownOpen(false);
-                    navigate('/track-sales');
+                    navigate('/sales');
                   }}
                 >
                   Track Sales
