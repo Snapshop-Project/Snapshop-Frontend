@@ -1,0 +1,65 @@
+.sale-item-grid-container {
+    border: 2px solid #e5e5e5;
+    padding: 20px;
+    width: 900px;
+    font-family: Arial, sans-serif;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    background-color: white;
+    margin-top: 100px;
+}
+    
+.sale-item-grid-container h2 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    margin-top: 0px;
+}
+    
+.sale-item-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+}
+    
+.sale-item-card {
+    border: 2px solid rgb(242, 141, 77);
+    padding: 10px;
+    position: relative;
+    text-align: center;
+    font-size: 14px;
+    border-radius: 15px;
+}
+    
+.sale-item-header {
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-top: 5px;
+}
+    
+.sale-item-name {
+    font-size: 20px;
+}
+    
+.sale-item-img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border: 5px solid maroon;
+    padding: 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: brown; 
+    border-radius: 8px;
+}
+    
+.sale-item-price {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 7px;
+}
+
+.sale-item-purchaser {
+    font-size: 15px;
+    margin-top: 5px;
+}
+

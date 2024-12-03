@@ -5,6 +5,7 @@ import Browser from './pages/browsing/index';
 import Cart from "./pages/cart";
 import ProfilePage from './pages/profile/ProfilePage';
 import Checkout from "./pages/checkout";
+import SalesPage from './pages/sales/SalesPage';
 import PicturePage from "./pages/PicturePage";
 import CreateAccount from "./pages/createAccount";
 import Login from "./pages/login";
@@ -20,6 +21,7 @@ const RoutesTree = () => {
       <Route path="/cart" element={<Cart />} />
       <Route path="/checkout" element={<Checkout />} />
       <Route path="/profile" element={<ProfilePage />} />
+      <Route path="/sales" element={<SalesPage />} />
       <Route path="/picture/:id" element={<PicturePage />} />
     </Routes>
   );
