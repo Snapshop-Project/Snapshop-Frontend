@@ -68,16 +68,13 @@ input[type="text"], input[type="email"], textarea {
     font-family: 'Arial', sans-serif; 
     font-size: 16px; 
     color: white; 
-    background-color: orange; 
+    background-color: rgb(242, 141, 77);; 
     border: none;
     border-radius: 5px; 
     padding: 8px 12px; 
     cursor: pointer; 
   }
-  
-  button:hover {
-    background-color: darkorange; 
-  }
+
   
 
 
