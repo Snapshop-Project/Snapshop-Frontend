@@ -47,6 +47,9 @@ function CartItemList({ items, setItems }) {
         open={openDialog}
         onClose={handleCloseDialog}
         onConfirm={handleConfirmRemove}
+        title={"Are you sure you want to remove this photograph from your cart?"}
+        confirmText={"Remove"}
+        cancelText={"Cancel"}
       />
     </div>
   );
