@@ -1,0 +1,26 @@
+.profile-page-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh; 
+  margin-top: 130px;
+}
+
+.profile-main-content-page {
+  flex: 1;
+  display: flex;
+}
+
+.profile-content-area-page {
+  flex: 1;
+  flex-direction: column;
+  display: flex;
+  /* margin-left: 70px; */
+  align-items: center;
+  margin-top: 10px;
+}
+
+.profile-albums-page {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns */
+  gap: 20px;
+}
