@@ -41,22 +41,22 @@ function ProfileHeader({
 
       {isEditing ? (
         <div className="edit-profile-form">
-          <input
+          <input className= "edit-profile-text"
             type="text"
             value={firstName}
             onChange={(e) => setFirstName(e.target.value)}
           />
-          <input
+          <input className= "edit-profile-text"
             type="text"
             value={lastName}
             onChange={(e) => setLastName(e.target.value)}
           />
-          <input
+          <input className= "edit-profile-text"
             type="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
-          <textarea
+          <textarea className= "edit-profile-text"
             value={bio}
             onChange={(e) => setBio(e.target.value)}
           ></textarea>
