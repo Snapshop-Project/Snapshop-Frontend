@@ -4,6 +4,8 @@ import { Route, Routes } from 'react-router-dom';
 import Browser from './pages/browsing/index';
 import Cart from "./pages/cart";
 import ProfilePage from './pages/profile/ProfilePage';
+import EditProfilePage from './pages/editProfile/EditProfilePage';
+
 import Checkout from "./pages/checkout";
 import SalesPage from './pages/sales/SalesPage';
 import PicturePage from "./pages/PicturePage";
@@ -20,7 +22,7 @@ const RoutesTree = () => {
       <Route path="/createAccount" element={<CreateAccount />} />
       <Route path="/cart" element={<Cart />} />
       <Route path="/checkout" element={<Checkout />} />
-      <Route path="/profile" element={<ProfilePage />} />
+      <Route path="/editProfile" element={<EditProfilePage />} />
       <Route path="/sales" element={<SalesPage />} />
       <Route path="/picture/:id" element={<PicturePage />} />
     </Routes>

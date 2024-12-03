@@ -74,7 +74,7 @@ const Header = () => {
                   className="header-dropdown-item"
                   onClick={() => {
                     setIsDropdownOpen(false);
-                    navigate('/profile');
+                    navigate('/editProfile');
                   }}
                 >
                   Profile
