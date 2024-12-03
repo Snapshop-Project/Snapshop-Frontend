@@ -1,0 +1,49 @@
+.login-form-container {
+    border: 2px solid #e5e5e5;
+    padding: 20px;
+    width: 33%;
+    font-family: Arial, sans-serif;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    background-color: white;
+    margin-top: 100px;
+  }
+  .login-main-content {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+    margin-top: 100px;
+    align-items: center;
+  }
+  .login-form-container h2{
+    text-align: center;
+    font-size: 2rem;
+  }  
+  .reset-password-link {
+    margin-top: -10px;
+    text-align: block;
+    margin-bottom: 10px;
+  }
+  
+  .reset-password-link a {
+    color: rgb(242, 141, 77);
+    text-decoration: none;
+    font-size: 1rem;
+  }
+  
+  .reset-password-link a:hover {
+    text-decoration: underline;
+  }
+  .create-account-link-container{
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+  }
+  .create-account-link-container a{
+    color: rgb(242, 141, 77);
+    text-decoration: none;
+    font-size: 1rem;
+  }
+  .create-account-link-container a:hover {
+    text-decoration: underline;
+  }
