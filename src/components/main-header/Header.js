@@ -42,13 +42,13 @@ const Header = () => {
     <header className="header">
       <div className="header-content" >
         <div className="icon-container">
-          <div className="header-icon" onClick={() => navigate('/Snapshop-Frontend')} style={{ color: location.pathname === '/Snapshop-Frontend' ? '#854219' : 'white' }}> 
+          <div className="header-icon" onClick={() => navigate('/Snapshop-Frontend/')} style={{ color: location.pathname === '/Snapshop-Frontend/' ? '#854219' : 'white' }}> 
             <FaHome size={54}/>
           </div>
         </div>
         {/* Centered logo as home button */}
         {/*<Link to="/" className="logo-link"> */}
-        <img src="/Snapshop-Frontend/Logo2.jpeg" alt="Logo" className="logo" onClick={() => navigate('/Snapshop-Frontend')}/>
+        <img src="/Snapshop-Frontend/Logo2.jpeg" alt="Logo" className="logo" onClick={() => navigate('/Snapshop-Frontend/')}/>
         {/*</Link> */}
         <div className="icon-container">
           {/* Cart Icon */}

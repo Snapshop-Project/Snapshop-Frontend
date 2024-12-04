@@ -19,7 +19,7 @@ const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
-  const from = location.state?.from || '/Snapshop-Frontend';
+  const from = location.state?.from || '/Snapshop-Frontend/';
 
   const handleChange = (e) => {
     const { name, value } = e.target;
