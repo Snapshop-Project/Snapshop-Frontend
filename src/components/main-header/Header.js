@@ -17,7 +17,7 @@ const Header = () => {
   };
   const handleLogout = () => {
     logout();
-    navigate('/login');
+    navigate('/Snapshop-Frontend/login');
   };
   const handleClickOutside = (event) => {
     if (
@@ -42,17 +42,17 @@ const Header = () => {
     <header className="header">
       <div className="header-content" >
         <div className="icon-container">
-          <div className="header-icon" onClick={() => navigate('/')} style={{ color: location.pathname === '/' ? '#854219' : 'white' }}> 
+          <div className="header-icon" onClick={() => navigate('/Snapshop-Frontend')} style={{ color: location.pathname === '/Snapshop-Frontend' ? '#854219' : 'white' }}> 
             <FaHome size={54}/>
           </div>
         </div>
         {/* Centered logo as home button */}
         {/*<Link to="/" className="logo-link"> */}
-        <img src="/Logo2.jpeg" alt="Logo" className="logo" onClick={() => navigate('/')}/>
+        <img src="/Snapshop-Frontend/Logo2.jpeg" alt="Logo" className="logo" onClick={() => navigate('/Snapshop-Frontend')}/>
         {/*</Link> */}
         <div className="icon-container">
           {/* Cart Icon */}
-          <div className="header-icon" onClick={() => navigate('/cart')} style={{ color: location.pathname === '/cart' ? '#854219' : 'white'}}>
+          <div className="header-icon" onClick={() => navigate('/Snapshop-Frontend/cart')} style={{ color: location.pathname === '/Snapshop-Frontend/cart' ? '#854219' : 'white'}}>
             <FaShoppingCart size={42} />
           </div>
           {/* Profile Icon */}
@@ -64,7 +64,7 @@ const Header = () => {
               style={{ color: 'white' }}
             >
               <div className="header-profile-picture2">
-                <img src="/ExampleImages/Portrait.jpg" alt="Profile Picture"/>
+                <img src="/Snapshop-Frontend/ExampleImages/Portrait.jpg" alt="Profile Picture"/>
               </div>
               {/* <FaUser size={42} /> */}
             </div>
@@ -74,7 +74,7 @@ const Header = () => {
                   className="header-dropdown-item"
                   onClick={() => {
                     setIsDropdownOpen(false);
-                    navigate('/editProfile');
+                    navigate('/Snapshop-Frontend/editProfile');
                   }}
                 >
                   Profile
@@ -83,7 +83,7 @@ const Header = () => {
                   className="header-dropdown-item"
                   onClick={() => {
                     setIsDropdownOpen(false);
-                    navigate('/sales');
+                    navigate('/Snapshop-Frontend/sales');
                   }}
                 >
                   Track Sales
@@ -98,7 +98,7 @@ const Header = () => {
             //   <FaUser size={42} />
             // </div>
           ) : (
-            <button className="login-button-header" onClick={() => navigate('/login')}>
+            <button className="login-button-header" onClick={() => navigate('/Snapshop-Frontend/login')}>
               Login
             </button>
           )}

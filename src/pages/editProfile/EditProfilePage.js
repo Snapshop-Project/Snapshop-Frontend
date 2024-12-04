@@ -9,14 +9,14 @@ function EditProfilePage() {
   const [lastName, setLastName] = useState("Doe");
   const [email, setEmail] = useState("johndoe@example.com");
   const [bio, setBio] = useState("This is a short bio about John Doe.");
-  const [profilePicture, setProfilePicture] = useState("/ExampleImages/Portrait.jpg");
+  const [profilePicture, setProfilePicture] = useState("/Snapshop-Frontend/ExampleImages/Portrait.jpg");
 
   const [photos, setPhotos] = useState([
-    { url: '/ExampleImages/Animal.jpg', title: 'Animal' },
-    { url: '/ExampleImages/Cave.jpg', title: 'Cave' },
-    { url: '/ExampleImages/Cityscape.jpg', title: 'Cityscape' },
-    { url: '/ExampleImages/PinkFlowers.jpg', title: 'Pink Flowers' },
-    { url: '/ExampleImages/RedPanda.jpg', title: 'Red Panda' },
+    { url: '/Snapshop-Frontend/ExampleImages/Animal.jpg', title: 'Animal' },
+    { url: '/Snapshop-Frontend/ExampleImages/Cave.jpg', title: 'Cave' },
+    { url: '/Snapshop-Frontend/ExampleImages/Cityscape.jpg', title: 'Cityscape' },
+    { url: '/Snapshop-Frontend/ExampleImages/PinkFlowers.jpg', title: 'Pink Flowers' },
+    { url: '/Snapshop-Frontend/ExampleImages/RedPanda.jpg', title: 'Red Panda' },
   ]);
 
   const [isModalOpen, setIsModalOpen] = useState(false);

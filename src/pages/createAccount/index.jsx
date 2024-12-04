@@ -70,7 +70,7 @@ const CreateAccount = () => {
     }
   };
   const HandleLoginNavigate = () => {
-    navigate('/login');
+    navigate('/Snapshop-Frontend/login');
   };
   const handleClickShowPassword = () => {
     setShowPassword((prev) => !prev);
@@ -122,7 +122,7 @@ const CreateAccount = () => {
         <button type="submit" className="submit-button">
           Create Account
         </button>
-        <span class="create-account-link-container">Already have an account?&nbsp;<Link to="/login">Login Here</Link></span>
+        <span class="create-account-link-container">Already have an account?&nbsp;<Link to="/Snapshop-Frontend/login">Login Here</Link></span>
       </form>
         )}
       </div>

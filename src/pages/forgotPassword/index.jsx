@@ -36,7 +36,7 @@ const ForgotPassword = () => {
     }
   };
   const HandleLoginNavigate = () => {
-    navigate('/login');
+    navigate('/Snapshop-Frontend/login');
   };
   return (
     <div className="create-account-app-container">

@@ -19,7 +19,7 @@ const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
-  const from = location.state?.from || '/';
+  const from = location.state?.from || '/Snapshop-Frontend';
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -70,7 +70,7 @@ const Login = () => {
         placeholder="********"
         />
         <div className="reset-password-link">
-            <Link to="/forgotPassword">Forgot Password?</Link>
+            <Link to="/Snapshop-Frontend/forgotPassword">Forgot Password?</Link>
         </div>
         {authError && (
             <span className="text-field-error-item ">{authError}</span>
@@ -78,7 +78,7 @@ const Login = () => {
         <button type="submit" className="submit-button">
             Login
         </button>
-        <span class="create-account-link-container">Don't have an account?&nbsp;<Link to="/createAccount">Create Account</Link></span>
+        <span class="create-account-link-container">Don't have an account?&nbsp;<Link to="/Snapshop-Frontend/createAccount">Create Account</Link></span>
       </form>
       </div>
     </div>
