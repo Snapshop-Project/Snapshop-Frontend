@@ -28,7 +28,7 @@ function CartSummary({ showMinimal = true, isPaymentAvailable, items }) {
   };
   const closePopup = () => {
     setShowPopup(false);
-    navigate('/Snapshop-Frontend');
+    navigate('/Snapshop-Frontend/');
   };
   const handleConfirmLogin = () => {
     setOpenDialog(false);
