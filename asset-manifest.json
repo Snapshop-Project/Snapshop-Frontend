@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Snapshop-Frontend/static/css/main.0d052bc7.css",
+    "main.js": "/Snapshop-Frontend/static/js/main.ea586014.js",
+    "index.html": "/Snapshop-Frontend/index.html",
+    "main.0d052bc7.css.map": "/Snapshop-Frontend/static/css/main.0d052bc7.css.map",
+    "main.ea586014.js.map": "/Snapshop-Frontend/static/js/main.ea586014.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0d052bc7.css",
+    "static/js/main.ea586014.js"
+  ]
+}
