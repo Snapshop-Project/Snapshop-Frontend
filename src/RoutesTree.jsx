@@ -16,15 +16,15 @@ import ForgotPassword from "./pages/forgotPassword";
 const RoutesTree = () => {
   return (
     <Routes>
-      <Route path="/" element={<Browser />} />
-      <Route path="/login" element={<Login />} />
-      <Route path="/forgotPassword" element={<ForgotPassword />} />
-      <Route path="/createAccount" element={<CreateAccount />} />
-      <Route path="/cart" element={<Cart />} />
-      <Route path="/checkout" element={<Checkout />} />
-      <Route path="/editProfile" element={<EditProfilePage />} />
-      <Route path="/sales" element={<SalesPage />} />
-      <Route path="/picture/:id" element={<PicturePage />} />
+      <Route path="Snapshop-Frontend/" element={<Browser />} />
+      <Route path="Snapshop-Frontend/login" element={<Login />} />
+      <Route path="Snapshop-Frontend/forgotPassword" element={<ForgotPassword />} />
+      <Route path="Snapshop-Frontend/createAccount" element={<CreateAccount />} />
+      <Route path="Snapshop-Frontend/cart" element={<Cart />} />
+      <Route path="Snapshop-Frontend/checkout" element={<Checkout />} />
+      <Route path="Snapshop-Frontend/editProfile" element={<EditProfilePage />} />
+      <Route path="Snapshop-Frontend/sales" element={<SalesPage />} />
+      <Route path="Snapshop-Frontend/picture/:id" element={<PicturePage />} />
     </Routes>
   );
 }
