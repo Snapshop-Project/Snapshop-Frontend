@@ -21,7 +21,7 @@ import {
 const imageData = [
   {
     id: 'cave',
-    src: '/ExampleImages/Cave.jpg',
+    src: '/Snapshop-Frontend/ExampleImages/Cave.jpg',
     title: 'The one that got away',
     description: 'A scenic cave by the water at sunset.',
     summary:
@@ -36,7 +36,7 @@ const imageData = [
   },
   {
     id: 'cityscape',
-    src: '/ExampleImages/Cityscape.jpg',
+    src: '/Snapshop-Frontend/ExampleImages/Cityscape.jpg',
     title: 'Sunset',
     description:
       'A bustling cityscape with the sun setting between buildings.',
@@ -51,7 +51,7 @@ const imageData = [
   },
   {
     id: 'animal',
-    src: '/ExampleImages/Animal.jpg',
+    src: '/Snapshop-Frontend/ExampleImages/Animal.jpg',
     title: 'Wildlife',
     description: 'A wild animal captured in its natural habitat.',
     summary: 'A true moment of nature.',
@@ -65,7 +65,7 @@ const imageData = [
   },
   {
     id: 'portrait',
-    src: '/ExampleImages/Portrait.jpg',
+    src: '/Snapshop-Frontend/ExampleImages/Portrait.jpg',
     title: 'Jumping',
     description: 'A black and white portrait with artistic effects.',
     summary: 'Perfect for artistic settings.',
@@ -79,7 +79,7 @@ const imageData = [
   },
   {
     id: 'pinkflowers',
-    src: '/ExampleImages/PinkFlowers.jpg',
+    src: '/Snapshop-Frontend/ExampleImages/PinkFlowers.jpg',
     title: 'Pink Blooms',
     description: 'Beautiful pink flowers in bloom.',
     summary: 'Ideal for spring decor.',
@@ -93,7 +93,7 @@ const imageData = [
   },
   {
     id: 'stairs',
-    src: '/ExampleImages/Stairs.jpg',
+    src: '/Snapshop-Frontend/ExampleImages/Stairs.jpg',
     title: 'Spiral',
     description: 'A mesmerizing spiral staircase.',
     summary: 'For architecture enthusiasts.',
@@ -107,7 +107,7 @@ const imageData = [
   },
   {
     id: 'turtle',
-    src: '/ExampleImages/Turtle.jpg',
+    src: '/Snapshop-Frontend/ExampleImages/Turtle.jpg',
     title: 'Turtle',
     description: 'A turtle in a lush green environment.',
     summary: 'A unique view of wildlife.',
@@ -121,7 +121,7 @@ const imageData = [
   },
   {
     id: 'wedding',
-    src: '/ExampleImages/Wedding.jpg',
+    src: '/Snapshop-Frontend/ExampleImages/Wedding.jpg',
     title: 'Wedding Day',
     description: 'A couple sharing a precious moment on their wedding day.',
     summary: 'A beautiful moment captured.',
@@ -135,7 +135,7 @@ const imageData = [
   },
   {
     id: 'redpanda',
-    src: '/ExampleImages/RedPanda.jpg',
+    src: '/Snapshop-Frontend/ExampleImages/RedPanda.jpg',
     title: 'Red Panda',
     description: 'An adorable red panda relaxing on a branch.',
     summary: 'A favorite for animal lovers.',
@@ -149,7 +149,7 @@ const imageData = [
   },
   {
     id: 'sunset',
-    src: '/ExampleImages/Sunset.jpg',
+    src: '/Snapshop-Frontend/ExampleImages/Sunset.jpg',
     title: 'Golden Sunset',
     description: 'A beautiful sunset over a vast landscape.',
     summary: 'Perfect for any room decor.',
@@ -187,12 +187,12 @@ function PicturePage() {
         if (event.key === 'ArrowLeft') {
           // Navigate to previous image
           if (!isFirst) {
-            navigate(`/picture/${imageData[currentIndex - 1].id}`);
+            navigate(`/Snapshop-Frontend/picture/${imageData[currentIndex - 1].id}`);
           }
         } else if (event.key === 'ArrowRight') {
           // Navigate to next image
           if (!isLast) {
-            navigate(`/picture/${imageData[currentIndex + 1].id}`);
+            navigate(`/Snapshop-Frontend/picture/${imageData[currentIndex + 1].id}`);
           }
         } else if (event.key === 'Escape' && isModalOpen) {
           // Close modal on Escape key
@@ -254,7 +254,7 @@ function PicturePage() {
                     className="nav-button prev-button"
                     onClick={(e) => {
                       e.stopPropagation();
-                      navigate(`/picture/${imageData[currentIndex - 1].id}`);
+                      navigate(`/Snapshop-Frontend/picture/${imageData[currentIndex - 1].id}`);
                     }}
                     aria-label="Previous Image"
                   >
@@ -266,7 +266,7 @@ function PicturePage() {
                     className="nav-button next-button"
                     onClick={(e) => {
                       e.stopPropagation();
-                      navigate(`/picture/${imageData[currentIndex + 1].id}`);
+                      navigate(`/Snapshop-Frontend/picture/${imageData[currentIndex + 1].id}`);
                     }}
                     aria-label="Next Image"
                   >
@@ -278,14 +278,14 @@ function PicturePage() {
               <div className="details-sidebar">
                 <button
                   className="close-button"
-                  onClick={() => navigate('/')}
+                  onClick={() => navigate('/Snapshop-Frontend')}
                   aria-label="Close"
                 >
                   ×
                 </button>
                 <div className="profile-info">
                   <img
-                    src="/BlankProfile.webp"
+                    src="/Snapshop-Frontend/BlankProfile.webp"
                     alt="Profile"
                     className="profile-picture"
                   />
@@ -304,9 +304,7 @@ function PicturePage() {
                   </div>
                   <div className="price-option">
                     <input type="radio" name="price" />
-                    <label>{`$${(image.price * 0.75).toFixed(
-                      2
-                    )} for 25 images/month`}</label>
+                    <label>169.99$ for 25 images/month</label>
                   </div>
                 </div>
   
