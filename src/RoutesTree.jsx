@@ -1,11 +1,9 @@
-// src/RoutesTree.js
 import React from "react";
 import { Route, Routes } from 'react-router-dom';
 import Browser from './pages/browsing/index';
 import Cart from "./pages/cart";
 import ProfilePage from './pages/profile/ProfilePage';
 import EditProfilePage from './pages/editProfile/EditProfilePage';
-
 import Checkout from "./pages/checkout";
 import SalesPage from './pages/sales/SalesPage';
 import PicturePage from "./pages/PicturePage";
@@ -16,6 +14,7 @@ import ForgotPassword from "./pages/forgotPassword";
 const RoutesTree = () => {
   return (
     <Routes>
+      {/* Routes with Snapshop-Frontend prefix */}
       <Route path="Snapshop-Frontend/" element={<Browser />} />
       <Route path="Snapshop-Frontend/login" element={<Login />} />
       <Route path="Snapshop-Frontend/forgotPassword" element={<ForgotPassword />} />
@@ -25,6 +24,13 @@ const RoutesTree = () => {
       <Route path="Snapshop-Frontend/editProfile" element={<EditProfilePage />} />
       <Route path="Snapshop-Frontend/sales" element={<SalesPage />} />
       <Route path="Snapshop-Frontend/picture/:id" element={<PicturePage />} />
+
+      {/* Simplified Routes */}
+      <Route path="/" element={<Browser />} />
+      <Route path="/cart" element={<Cart />} />
+      <Route path="/checkout" element={<Checkout />} />
+      <Route path="/profile" element={<ProfilePage />} />
+      <Route path="/picture/:id" element={<PicturePage />} />
     </Routes>
   );
 }
