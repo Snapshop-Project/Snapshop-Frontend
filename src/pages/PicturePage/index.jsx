@@ -47,12 +47,12 @@ function PicturePage() {
                         <div className="image-container">
                             <img src={image.src} alt={image.title} className={`full-image ${image.id}`} />
                             {!isFirst && (
-                                <button className="nav-button prev-button" onClick={() => navigate(`/picture/${imageData[currentIndex - 1].id}`)}>
+                                <button className="nav-button prev-button" onClick={() => navigate(`/Snapshop-Frontend/picture/${imageData[currentIndex - 1].id}`)}>
                                     ◀
                                 </button>
                             )}
                             {!isLast && (
-                                <button className="nav-button next-button" onClick={() => navigate(`/picture/${imageData[currentIndex + 1].id}`)}>
+                                <button className="nav-button next-button" onClick={() => navigate(`/Snapshop-Frontend/picture/${imageData[currentIndex + 1].id}`)}>
                                     ▶
                                 </button>
                             )}

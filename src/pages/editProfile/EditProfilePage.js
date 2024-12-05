@@ -11,7 +11,7 @@ function EditProfilePage() {
   const [lastName, setLastName] = useState("Doe");
   const [email, setEmail] = useState("johndoe@example.com");
   const [bio, setBio] = useState("This is a short bio about John Doe.");
-  const [profilePicture, setProfilePicture] = useState("/ExampleImages/Portrait.jpg");
+  const [profilePicture, setProfilePicture] = useState("/Snapshop-Frontend/ExampleImages/Portrait.jpg");
 
   const [photos, setPhotos] = useState([
     { url: '/ExampleImages/Animal.jpg', title: 'Animal', isForSale: false, price: '', description: '' },

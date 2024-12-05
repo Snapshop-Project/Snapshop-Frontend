@@ -15,9 +15,9 @@ const pics = [
 
 function SalesPage() {
     const [items, setItems] = useState([
-        { id: 1, src: '/ExampleImages/RushingFalls.jpg', name: 'Rushing Falls', purchaser: 'Purchased by: John Deer', price: 17.99 },
-        { id: 2, src: '/ExampleImages/RushingFalls.jpg', name: 'Rushing Falls', purchaser: 'Purchased by: Ron McDonald', price: 17.99 },
-        { id: 3, src: '/ExampleImages/RushingFalls.jpg', name: 'Rushing Falls', purchaser: 'Purchased by: Burgess King', price: 17.99 },
+        { id: 1, src: '/Snapshop-Frontend/ExampleImages/RushingFalls.jpg', name: 'Rushing Falls', purchaser: 'Purchased by: John Deer', price: 17.99 },
+        { id: 2, src: '/Snapshop-Frontend/ExampleImages/RushingFalls.jpg', name: 'Rushing Falls', purchaser: 'Purchased by: Ron McDonald', price: 17.99 },
+        { id: 3, src: '/Snapshop-Frontend/ExampleImages/RushingFalls.jpg', name: 'Rushing Falls', purchaser: 'Purchased by: Burgess King', price: 17.99 },
     ]);
   return (
     <div className="cart-app-container">

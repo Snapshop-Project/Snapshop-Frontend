@@ -16,7 +16,7 @@ function CartSummary({ showMinimal = true, isPaymentAvailable, items }) {
 
   const handleCheckout = () => {
     if (isAuthenticated) {
-      navigate('/checkout', { state: { items } });
+      navigate('/Snapshop-Frontend/checkout', { state: { items } });
     } else {
       setOpenDialog(true);
     }
@@ -28,11 +28,11 @@ function CartSummary({ showMinimal = true, isPaymentAvailable, items }) {
   };
   const closePopup = () => {
     setShowPopup(false);
-    navigate('/');
+    navigate('/Snapshop-Frontend/');
   };
   const handleConfirmLogin = () => {
     setOpenDialog(false);
-    navigate('/login', { state: { from: '/checkout', items } });
+    navigate('/Snapshop-Frontend/login', { state: { from: '/Snapshop-Frontend/checkout', items } });
   };
   
   const handleCloseDialog = () => {
