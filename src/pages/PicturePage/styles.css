@@ -104,8 +104,8 @@
     position: absolute;
     top: 10px; /* Position at the top of the sidebar */
     right: 15px; /* Align to the right edge of the sidebar */
-    font-size: 36px; /* Larger font size for visibility */
-    color: red; /* Red "X" color */
+    font-size: 16px; /* Larger font size for visibility */
+    color: rgb(242, 141, 77); /* Red "X" color */
     background: none; /* Transparent background */
     border: none; /* No border for a clean look */
     cursor: pointer; /* Pointer cursor for interaction */

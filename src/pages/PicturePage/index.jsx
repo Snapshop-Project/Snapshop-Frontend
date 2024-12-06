@@ -251,7 +251,7 @@ const isSmallImage = (image) => {
                   onClick={() => navigate('/')}
                   aria-label="Close"
                 >
-                  ×
+                  {'<'} Back To Browse
                 </button>
                 <div className="profile-info">
                   <img
