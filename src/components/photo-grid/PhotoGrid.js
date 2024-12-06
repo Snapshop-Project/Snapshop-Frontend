@@ -73,7 +73,7 @@ const PhotoGrid = ({ filters, searchQuery }) => {
     return (
         <div className="photo-grid">
             {filteredImages.map((image) => (
-                <Link to={`/picture/${image.id}`} key={image.id} className="photo-item-link">
+                <Link to={`/Snapshop-Frontend/picture/${image.id}`} key={image.id} className="photo-item-link">
                     <div className="photo-item">
                         <img src={image.src} alt={`Photo of ${image.id}`} onError={(e) => e.target.style.display = 'none'} />
                         <div class="photo-text">
