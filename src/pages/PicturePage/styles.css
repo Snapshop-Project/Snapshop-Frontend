@@ -2,13 +2,11 @@
     display: flex;
     flex-direction: column;
     height: 100vh;
-    /* overflow: hidden; */
 }
 
 .main-content {
     display: flex;
     flex: 1;
-    /* overflow: hidden; */
 }
 
 .content-area {
@@ -16,7 +14,6 @@
     display: flex;
     flex-direction: column;
     padding: 20px;
-    /* overflow-y: auto; */
 }
 
 .picture-page-full {
@@ -34,20 +31,22 @@
     border-radius: 10px;
     overflow: hidden;
     background: #f9f9f9;
-    height: 600px;
     position: relative;
+    margin: auto;
+
+    /* Make sure images fit dynamically */
+    max-width: 100%;
+    max-height: 600px; /* Prevent images from being too tall */
 }
 
 .full-image {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
-    transition: transform 0.3s ease;
+    max-width: 100%; /* Scale to fit container width */
+    max-height: 100%; /* Scale to fit container height */
+    object-fit: contain; /* Ensure the entire image is visible */
+    transition: transform 0.3s ease; /* Add zoom effect */
+    cursor: pointer; /* Show clickable cursor for image */
 }
 
-.image-container:hover .full-image {
-    transform: scale(1.1);
-}
 
 .nav-button {
     position: absolute;
@@ -85,8 +84,6 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    /* height: 600px; */
-    position: relative;
     margin-bottom: 10px;
 }
 
@@ -188,6 +185,6 @@
 }
 
 .share-button {
-    background: #3182ce;
+    background: #008000;
     color: white;
 }

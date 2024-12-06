@@ -1,0 +1,46 @@
+.image-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f9f9f9;
+    border-radius: 10px;
+    overflow: hidden;
+    aspect-ratio: 4 / 3; /* Maintain consistent aspect ratio */
+    max-width: 800px;
+    margin: auto;
+    cursor: pointer;
+}
+
+.full-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Crop the image if necessary */
+    transition: transform 0.3s ease;
+}
+
+.image-container:hover .full-image {
+    transform: scale(1.05);
+}
+
+.nav-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.8);
+    color: black;
+    border: none;
+    padding: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 10;
+}
+
+.prev-button {
+    left: 10px;
+}
+
+.next-button {
+    right: 10px;
+}
