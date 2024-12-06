@@ -1,7 +1,7 @@
 .sale-item-grid-container {
     border: 2px solid #e5e5e5;
     padding: 20px;
-    width: 900px;
+    width: 100%;
     font-family: Arial, sans-serif;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
     border-radius: 8px;
