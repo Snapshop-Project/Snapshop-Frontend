@@ -16,12 +16,6 @@ function CheckoutItemList({ items, paymentInfo, onPaymentInfoUpdate }) {
       onPaymentInfoUpdate(data);
       setIsModalOpen(false);
     };
-    // const [items] = useState([
-    //   { id: 1, name: "The one that got away", price: 10.99, format: "1920x1080 (JPEG)", src: '/ExampleImages/Cave.jpg' },
-    //   { id: 2, name: "Sunset", price: 15.99, format: "4K (PNG)", src: '/ExampleImages/Cityscape.jpg' },
-    //   { id: 3, name: "Morning Hike", price: 12.99, format: "1920x1080 (JPEG)", src: '/ExampleImages/Animal.jpg' },
-    //   { id: 4, name: "Jumping", price: 8.99, format: "1080x720 (JPEG)", src: '/ExampleImages/Portrait.jpg' },
-    // ]);
     return (
       <div className="item-grid-container">
         <div className='checkout-header-container'>

@@ -251,7 +251,7 @@ const isSmallImage = (image) => {
                   onClick={() => navigate('/Snapshop-Frontend')}
                   aria-label="Close"
                 >
-                  ×
+                  {'<'} Back To Browse
                 </button>
                 <div className="profile-info">
                   <img

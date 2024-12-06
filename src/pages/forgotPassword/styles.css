@@ -31,6 +31,7 @@
   .create-account-form-container h2{
     text-align: center;
     font-size: 2rem;
+    margin-bottom: 10px;
   }  
   .success-message {
     background-color: #e6ffe6;
