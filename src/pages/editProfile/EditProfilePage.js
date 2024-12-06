@@ -14,11 +14,11 @@ function EditProfilePage() {
   const [profilePicture, setProfilePicture] = useState("/Snapshop-Frontend/ExampleImages/Portrait.jpg");
 
   const [photos, setPhotos] = useState([
-    { url: '/ExampleImages/Animal.jpg', title: 'Animal', isForSale: false, price: '', description: '' },
-    { url: '/ExampleImages/Cave.jpg', title: 'Cave', isForSale: false, price: '', description: '' },
-    { url: '/ExampleImages/Cityscape.jpg', title: 'Cityscape', isForSale: false, price: '', description: '' },
-    { url: '/ExampleImages/PinkFlowers.jpg', title: 'Pink Flowers', isForSale: false, price: '', description: '' },
-    { url: '/ExampleImages/RedPanda.jpg', title: 'Red Panda', isForSale: false, price: '', description: '' },
+    { url: '/Snapshop-Frontend/ExampleImages/Animal.jpg', title: 'Animal', isForSale: false, price: '', description: '' },
+    { url: '/Snapshop-Frontend/ExampleImages/Cave.jpg', title: 'Cave', isForSale: false, price: '', description: '' },
+    { url: '/Snapshop-Frontend/ExampleImages/Cityscape.jpg', title: 'Cityscape', isForSale: false, price: '', description: '' },
+    { url: '/Snapshop-Frontend/ExampleImages/PinkFlowers.jpg', title: 'Pink Flowers', isForSale: false, price: '', description: '' },
+    { url: '/Snapshop-Frontend/ExampleImages/RedPanda.jpg', title: 'Red Panda', isForSale: false, price: '', description: '' },
   ]);
 
   const [isAddPhotoModalOpen, setIsAddPhotoModalOpen] = useState(false);
