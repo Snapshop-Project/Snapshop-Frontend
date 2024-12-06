@@ -29,9 +29,9 @@
     margin-top: 20px;
   }
   
-  /* Image Container */
+/* Image Container */
 .image-container {
-    flex: 5; /* Large container proportion */
+    flex: 2;
     position: relative;
     display: flex;
     align-items: center;
@@ -39,35 +39,23 @@
     border-radius: 10px;
     overflow: hidden;
     background: #f9f9f9;
-    width: 100%;
-    max-width: 1200px; /* Large container width */
-    height: 800px; /* Large container height */
+    height: 700px;
   }
   
+  /* Default Image Style */
   .full-image {
-    width: auto;
-    height: auto;
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
-    display: block;
-    transform: scale(1); /* Default scale for regular images */
-    transition: transform 0.2s ease-in-out;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease; /* Smooth transition for zoom effect */
   }
   
-  /* Apply scaling for smaller images */
-  .image-container img.too-small {
-    transform: scale(1.5); /* Scale smaller images */
+  /* Zoom Effect on Hover */
+  .image-container:hover .full-image {
+    transform: scale(1.2); /* Scale up the image by 20% */
   }
   
-  /* Responsive Adjustments */
-  @media (max-width: 768px) {
-    .image-container {
-      max-width: 100%; /* Full width for smaller screens */
-      height: 500px; /* Reduce height for smaller devices */
-    }
-  }
-  
+  /* Removed Click-to-Enlarge Hover Effects */
   
   /* Navigation Buttons */
   .nav-button {
@@ -80,6 +68,7 @@
     padding: 12px;
     font-size: 28px;
     cursor: pointer;
+    border-radius: 50%;
     transition: background 0.3s;
     opacity: 0;
   }
@@ -96,9 +85,9 @@
     opacity: 1;
   }
   
-/* Details Sidebar */
-.details-sidebar {
-    flex: 0.7; /* Further reduce the proportion of space occupied by the sidebar */
+  /* Details Sidebar */
+  .details-sidebar {
+    flex: 1;
     background: white;
     padding: 20px;
     border-radius: 10px;
@@ -106,45 +95,28 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    max-height: 90vh;
+    height: 700px;
+    position: relative;
     overflow-y: auto;
   }
-  
-  @media (max-width: 768px) {
-    .picture-page-full {
-      flex-direction: column; /* Stack image container and sidebar vertically */
-    }
-  
-    .image-container {
-      max-width: 100%; /* Allow full width for smaller screens */
-      height: 400px; /* Reduce height to fit smaller devices */
-    }
-  
-    .details-sidebar {
-      flex: 1;
-      width: 100%;
-      padding: 15px;
-    }
-  }
-  
-  /* Big Red "X" Close Button */
-  .close-button {
+/* Close Button */
+.close-button {
     position: absolute;
-    top: 10px;
-    right: 15px;
-    font-size: 48px; /* Larger "X" */
-    color: red;
-    background: none;
-    border: none;
-    cursor: pointer;
-    font-weight: bold;
-    padding: 0;
-    line-height: 1;
+    top: 10px; /* Position at the top */
+    right: 15px; /* Position at the right */
+    font-size: 36px; /* Larger font size for visibility */
+    color: red; /* Red "X" text */
+    background: none; /* No background for a clean look */
+    border: none; /* Remove borders */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-weight: bold; /* Bold for emphasis */
+    transition: color 0.3s ease; /* Smooth transition for hover effect */
   }
   
   .close-button:hover {
-    color: darkred; /* Slightly darker red on hover */
+    color: grey; /* Grey "X" on hover for subtle feedback */
   }
+  
   
   /* Profile Information */
   .profile-info {
@@ -279,4 +251,6 @@
   p {
     margin: 0 0 10px;
   }
+  
+  /* Removed Modal Styles */
   

@@ -223,124 +223,115 @@ function PicturePage() {
         <div className="main-content">
           <div className="content-area">
             <div className="picture-page-full">
-              <div className="image-container">
-                <img
-                  src={image.src}
-                  alt={image.title}
-                  className={`full-image ${image.id}`}
-                />
-                {!isFirst && (
-                  <button
-                    className="nav-button prev-button"
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      navigate(`/picture/${imageData[currentIndex - 1].id}`);
-                    }}
-                    aria-label="Previous Image"
-                  >
-                    ◀
-                  </button>
-                )}
-                {!isLast && (
-                  <button
-                    className="nav-button next-button"
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      navigate(`/picture/${imageData[currentIndex + 1].id}`);
-                    }}
-                    aria-label="Next Image"
-                  >
-                    ▶
-                  </button>
-                )}
-              </div>
+            <div className="image-container">
+  <img
+    src={image.src}
+    alt={image.title}
+    className={`full-image ${image.id}`} // Add the image ID as a dynamic class
+  />
+  {!isFirst && (
+    <button
+      className="nav-button prev-button"
+      onClick={(e) => {
+        e.stopPropagation();
+        navigate(`/picture/${imageData[currentIndex - 1].id}`);
+      }}
+      aria-label="Previous Image"
+    >
+      ◀
+    </button>
+  )}
+  {!isLast && (
+    <button
+      className="nav-button next-button"
+      onClick={(e) => {
+        e.stopPropagation();
+        navigate(`/picture/${imageData[currentIndex + 1].id}`);
+      }}
+      aria-label="Next Image"
+    >
+      ▶
+    </button>
+  )}
+</div>
+
   
               <div className="details-sidebar">
-                <button
-                  className="close-button"
-                  onClick={() => navigate('/')}
-                  aria-label="Close"
-                >
-                  ×
-                </button>
-                <div className="profile-info">
-                  <img
-                    src="/BlankProfile.webp"
-                    alt="Profile"
-                    className="profile-picture"
-                  />
-                  <span className="profile-name">{image.profile.name}</span>
-                </div>
-                <h2 className="image-title">{image.title}</h2>
-                <p className="image-summary">{image.summary}</p>
-                <p className="image-description">{image.description}</p>
-                <p className="stock-id">{`Stock Photo ID: ${image.stockId}`}</p>
-  
-                <div className="pricing-section">
-                  <h3>Purchase Options (CAD)</h3>
-                  <div className="price-option">
-                    <input type="radio" name="price" defaultChecked readOnly />
-                    <label>{`$${image.price} for this image`}</label>
-                  </div>
-                  <div className="price-option">
-                    <input type="radio" name="price" />
-                    <label>{`$${(image.price * 0.75).toFixed(
-                      2
-                    )} for 25 images/month`}</label>
-                  </div>
-                </div>
-  
-                <div className="rating-section">
-                  <h3>Rate this photo:</h3>
-                  {[...Array(5)].map((_, index) => (
-                    <span
-                      key={index}
-                      onClick={() => handleRating(index + 1)}
-                      style={{
-                        cursor: 'pointer',
-                        color: index < rating ? 'gold' : 'gray',
-                        fontSize: '1.8rem',
-                      }}
-                    >
-                      ★
-                    </span>
-                  ))}
-                </div>
-  
-                <div className="action-buttons">
-                  <button
-                    className="bookmark-button"
-                    onClick={handleBookmark}
-                    aria-label="Bookmark this image"
-                  >
-                    <FontAwesomeIcon
-                      icon={regularBookmark}
-                      className="fa-icon"
-                    />
-                    Bookmark
-                  </button>
-                  <button
-                    className="add-to-cart-button"
-                    onClick={handleAddToCart}
-                  >
-                    <FontAwesomeIcon
-                      icon={faShoppingCart}
-                      className="fa-icon"
-                    />
-                    Add to Cart
-                  </button>
-                  <button
-                    className="share-button"
-                    onClick={handleShare}
-                  >
-                    <FontAwesomeIcon
-                      icon={faShareAlt}
-                      className="fa-icon"
-                    />
-                    Share
-                  </button>
-                </div>
-              </div>
+  <button
+    className="close-button"
+    onClick={() => navigate('/')}
+    aria-label="Close"
+  >
+    ×
+  </button>
+  <div className="profile-info">
+    <img
+      src="/BlankProfile.webp"
+      alt="Profile"
+      className="profile-picture"
+    />
+    <span className="profile-name">{image.profile.name}</span>
+  </div>
+  <h2 className="image-title">{image.title}</h2>
+  <p className="image-summary">{image.summary}</p>
+  <p className="image-description">{image.description}</p>
+  <p className="stock-id">{`Stock Photo ID: ${image.stockId}`}</p>
+
+  {/* Resolution Section */}
+  <div className="resolution-section">
+    <h3>Resolution</h3>
+    <p>{`${image.resolution[0]} x ${image.resolution[1]} pixels`}</p>
+  </div>
+
+  <div className="pricing-section">
+    <h3>Purchase Options (CAD)</h3>
+    <div className="price-option">
+      <input type="radio" name="price" defaultChecked readOnly />
+      <label>{`$${image.price} for this image`}</label>
+    </div>
+    <div className="price-option">
+      <input type="radio" name="price" />
+      <label>{`$${(image.price * 0.75).toFixed(2)} for 25 images/month`}</label>
+    </div>
+  </div>
+
+  <div className="rating-section">
+    <h3>Rate this photo:</h3>
+    {[...Array(5)].map((_, index) => (
+      <span
+        key={index}
+        onClick={() => handleRating(index + 1)}
+        style={{
+          cursor: 'pointer',
+          color: index < rating ? 'gold' : 'gray',
+          fontSize: '1.8rem',
+        }}
+      >
+        ★
+      </span>
+    ))}
+  </div>
+
+  <div className="action-buttons">
+    <button
+      className="bookmark-button"
+      onClick={handleBookmark}
+      aria-label="Bookmark this image"
+    >
+      <FontAwesomeIcon icon={regularBookmark} className="fa-icon" />
+      Bookmark
+    </button>
+    <button className="add-to-cart-button" onClick={handleAddToCart}>
+      <FontAwesomeIcon icon={faShoppingCart} className="fa-icon" />
+      Add to Cart
+    </button>
+    <button className="share-button" onClick={handleShare}>
+      <FontAwesomeIcon icon={faShareAlt} className="fa-icon" />
+      Share
+    </button>
+  </div>
+</div>
+
             </div>
           </div>
         </div>
