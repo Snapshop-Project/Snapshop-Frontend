@@ -1,17 +1,25 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import './CartSummary.css';
 import { useNavigate } from 'react-router-dom';
+import { AuthContext } from '../store/Authentication';
+import ConfirmDialog from '../confirm-dialog/ConfirmDialog';
 
 function CartSummary({ showMinimal = true, isPaymentAvailable, items }) {
   const [showPopup, setShowPopup] = useState(false);
+  const [openDialog, setOpenDialog] = useState(false);
   const itemsInCart = items.length;
   const subtotal = items.reduce((total, item) => total + item.price, 0);
   const gst = subtotal * 0.05;
   const fulltotal = gst + subtotal;
   const navigate = useNavigate();
+  const { isAuthenticated } = useContext(AuthContext);
 
   const handleCheckout = () => {
-    navigate('/checkout', { state: { items } });
+    if (isAuthenticated) {
+      navigate('/Snapshop-Frontend/checkout', { state: { items } });
+    } else {
+      setOpenDialog(true);
+    }
   };
   const handlePurchase = () => {
     if (isPaymentAvailable) {
@@ -20,7 +28,15 @@ function CartSummary({ showMinimal = true, isPaymentAvailable, items }) {
   };
   const closePopup = () => {
     setShowPopup(false);
-    navigate('/');
+    navigate('/Snapshop-Frontend/');
+  };
+  const handleConfirmLogin = () => {
+    setOpenDialog(false);
+    navigate('/Snapshop-Frontend/login', { state: { from: '/Snapshop-Frontend/checkout', items } });
+  };
+  
+  const handleCloseDialog = () => {
+    setOpenDialog(false);
   };
   return (
       <div className="cart-summary">
@@ -67,6 +83,14 @@ function CartSummary({ showMinimal = true, isPaymentAvailable, items }) {
           </div>
         </div>
       )}
+      <ConfirmDialog
+        open={openDialog}
+        onClose={handleCloseDialog}
+        onConfirm={handleConfirmLogin}
+        title={"You need to be logged in to proceed to checkout. Do you want to login now?"}
+        confirmText={"Take Me"}
+        cancelText={"Cancel"}
+      />
     </div>
   );
 }
