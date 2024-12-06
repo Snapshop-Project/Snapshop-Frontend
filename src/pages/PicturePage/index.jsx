@@ -167,7 +167,8 @@ const isSmallImage = (image) => {
     const [width, height] = image.resolution;
     return width < 800 || height < 600; // Threshold for small images
   };
-function PicturePage() {
+  
+  function PicturePage() {
     const { id } = useParams();
     const navigate = useNavigate();
     const image = imageData.find((img) => img.id === id);
@@ -178,9 +179,7 @@ function PicturePage() {
     const isLast = currentIndex === imageData.length - 1;
   
     useEffect(() => {
-      if (!image) {
-        return;
-      }
+      if (!image) return;
   
       const handleKeyDown = (event) => {
         if (event.key === 'ArrowLeft' && !isFirst) {
@@ -201,21 +200,10 @@ function PicturePage() {
       return <p>Image not found</p>;
     }
   
-    const handleBookmark = () => {
-      alert('Coming Soon!');
-    };
-  
-    const handleAddToCart = () => {
-      alert('Coming Soon!');
-    };
-  
-    const handleShare = () => {
-      alert('Coming Soon!');
-    };
-  
-    const handleRating = (rate) => {
-      alert('Coming Soon!');
-    };
+    const handleBookmark = () => alert('Coming Soon!');
+    const handleAddToCart = () => alert('Coming Soon!');
+    const handleShare = () => alert('Coming Soon!');
+    const handleRating = (rate) => alert('Coming Soon!');
   
     return (
       <div className="full-page-container">
@@ -223,121 +211,128 @@ function PicturePage() {
         <div className="main-content">
           <div className="content-area">
             <div className="picture-page-full">
-            <div className="image-container">
-  <img
-    src={image.src}
-    alt={image.title}
-    className={`full-image ${image.id}`} // Add the image ID as a dynamic class
-  />
-  {!isFirst && (
-    <button
-      className="nav-button prev-button"
-      onClick={(e) => {
-        e.stopPropagation();
-        navigate(`/picture/${imageData[currentIndex - 1].id}`);
-      }}
-      aria-label="Previous Image"
-    >
-      ◀
-    </button>
-  )}
-  {!isLast && (
-    <button
-      className="nav-button next-button"
-      onClick={(e) => {
-        e.stopPropagation();
-        navigate(`/picture/${imageData[currentIndex + 1].id}`);
-      }}
-      aria-label="Next Image"
-    >
-      ▶
-    </button>
-  )}
-</div>
-
+              {/* Image Container */}
+              <div className="image-container">
+                <img
+                  src={image.src}
+                  alt={image.title}
+                  className={`full-image ${image.id}`}
+                />
+                {!isFirst && (
+                  <button
+                    className="nav-button prev-button"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      navigate(`/picture/${imageData[currentIndex - 1].id}`);
+                    }}
+                    aria-label="Previous Image"
+                  >
+                    ◀
+                  </button>
+                )}
+                {!isLast && (
+                  <button
+                    className="nav-button next-button"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      navigate(`/picture/${imageData[currentIndex + 1].id}`);
+                    }}
+                    aria-label="Next Image"
+                  >
+                    ▶
+                  </button>
+                )}
+              </div>
   
+              {/* Details Sidebar */}
               <div className="details-sidebar">
-  <button
-    className="close-button"
-    onClick={() => navigate('/')}
-    aria-label="Close"
-  >
-    ×
-  </button>
-  <div className="profile-info">
-    <img
-      src="/BlankProfile.webp"
-      alt="Profile"
-      className="profile-picture"
-    />
-    <span className="profile-name">{image.profile.name}</span>
-  </div>
-  <h2 className="image-title">{image.title}</h2>
-  <p className="image-summary">{image.summary}</p>
-  <p className="image-description">{image.description}</p>
-  <p className="stock-id">{`Stock Photo ID: ${image.stockId}`}</p>
-
-  {/* Resolution Section */}
-  <div className="resolution-section">
-    <h3>Resolution</h3>
-    <p>{`${image.resolution[0]} x ${image.resolution[1]} pixels`}</p>
-  </div>
-
-  <div className="pricing-section">
-    <h3>Purchase Options (CAD)</h3>
-    <div className="price-option">
-      <input type="radio" name="price" defaultChecked readOnly />
-      <label>{`$${image.price} for this image`}</label>
-    </div>
-    <div className="price-option">
-      <input type="radio" name="price" />
-      <label>{`$${(image.price * 0.75).toFixed(2)} for 25 images/month`}</label>
-    </div>
-  </div>
-
-  <div className="rating-section">
-    <h3>Rate this photo:</h3>
-    {[...Array(5)].map((_, index) => (
-      <span
-        key={index}
-        onClick={() => handleRating(index + 1)}
-        style={{
-          cursor: 'pointer',
-          color: index < rating ? 'gold' : 'gray',
-          fontSize: '1.8rem',
-        }}
-      >
-        ★
-      </span>
-    ))}
-  </div>
-
-  <div className="action-buttons">
-    <button
-      className="bookmark-button"
-      onClick={handleBookmark}
-      aria-label="Bookmark this image"
-    >
-      <FontAwesomeIcon icon={regularBookmark} className="fa-icon" />
-      Bookmark
-    </button>
-    <button className="add-to-cart-button" onClick={handleAddToCart}>
-      <FontAwesomeIcon icon={faShoppingCart} className="fa-icon" />
-      Add to Cart
-    </button>
-    <button className="share-button" onClick={handleShare}>
-      <FontAwesomeIcon icon={faShareAlt} className="fa-icon" />
-      Share
-    </button>
-  </div>
-</div>
-
+                <button
+                  className="close-button"
+                  onClick={() => navigate('/')}
+                  aria-label="Close"
+                >
+                  ×
+                </button>
+                <div className="profile-info">
+                  <img
+                    src="/BlankProfile.webp"
+                    alt="Profile"
+                    className="profile-picture"
+                  />
+                  <span className="profile-name">{image.profile.name}</span>
+                </div>
+                <h2 className="image-title">{image.title}</h2>
+                <p className="image-summary">{image.summary}</p>
+                <p className="image-description">{image.description}</p>
+                <p className="stock-id">{`Stock Photo ID: ${image.stockId}`}</p>
+  
+                {/* Resolution Section */}
+                <div className="resolution-section">
+                  <h3>Resolution</h3>
+                  <p>{`${image.resolution[0]} x ${image.resolution[1]} pixels`}</p>
+                </div>
+  
+                {/* Pricing Section */}
+                <div className="pricing-section">
+                  <h3>Purchase Options (CAD)</h3>
+                  <div className="price-option">
+                    <input type="radio" name="price" defaultChecked readOnly />
+                    <label>{`$${image.price} for this image`}</label>
+                  </div>
+                  <div className="price-option">
+                    <input type="radio" name="price" />
+                    <label>{`$${(image.price * 0.75).toFixed(
+                      2
+                    )} for 25 images/month`}</label>
+                  </div>
+                </div>
+  
+                {/* Rating Section */}
+                <div className="rating-section">
+                  <h3>Rate this photo:</h3>
+                  {[...Array(5)].map((_, index) => (
+                    <span
+                      key={index}
+                      onClick={() => setRating(index + 1)}
+                      style={{
+                        cursor: 'pointer',
+                        color: index < rating ? 'gold' : 'gray',
+                        fontSize: '1.8rem',
+                      }}
+                    >
+                      ★
+                    </span>
+                  ))}
+                </div>
+  
+                {/* Action Buttons */}
+                <div className="action-buttons">
+                  <button
+                    className="bookmark-button"
+                    onClick={handleBookmark}
+                    aria-label="Bookmark this image"
+                  >
+                    <FontAwesomeIcon icon={regularBookmark} className="fa-icon" />
+                    Bookmark
+                  </button>
+                  <button
+                    className="add-to-cart-button"
+                    onClick={handleAddToCart}
+                  >
+                    <FontAwesomeIcon icon={faShoppingCart} className="fa-icon" />
+                    Add to Cart
+                  </button>
+                  <button className="share-button" onClick={handleShare}>
+                    <FontAwesomeIcon icon={faShareAlt} className="fa-icon" />
+                    Share
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     );
-    
   }
   
   export default PicturePage;
