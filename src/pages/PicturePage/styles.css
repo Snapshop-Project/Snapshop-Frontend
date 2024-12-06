@@ -1,82 +1,91 @@
+/* Full Page Container */
 .full-page-container {
     display: flex;
     flex-direction: column;
     height: 100vh;
-    /* overflow: hidden; */
-}
-
-.main-content {
+    overflow: hidden;
+    overflow-y: auto
+  }
+  
+  /* Main Content Area */
+  .main-content {
     display: flex;
     flex: 1;
-    /* overflow: hidden; */
-}
-
-.content-area {
+    overflow: hidden;
+  }
+  
+  .content-area {
     flex: 1;
     display: flex;
     flex-direction: column;
     padding: 20px;
-    /* overflow-y: auto; */
-}
-
-.picture-page-full {
+    overflow-y: auto;
+  }
+  
+  /* Picture Page Layout */
+  .picture-page-full {
     display: flex;
     flex-direction: row;
     gap: 20px;
     margin-top: 20px;
-}
-
-.image-container {
+  }
+  
+  /* Image Container */
+  .image-container {
     flex: 2;
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 10px;
-    overflow: hidden;
-    background: #f9f9f9;
-    height: 600px;
-    position: relative;
-}
-
-.full-image {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
-    transition: transform 0.3s ease;
-}
-
-.image-container:hover .full-image {
-    transform: scale(1.1);
-}
-
-.nav-button {
+    overflow: hidden; /* Ensures zoomed images stay within container boundaries */
+    background: transparent; /* Makes the background transparent */
+    height: 700px; /* Fixed height for consistency */
+  }
+  
+  /* Default Image Style */
+  .full-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Ensures the entire image is visible without cropping */
+    transition: transform 0.3s ease; /* Smooth transition for zoom effect */
+  }
+  
+  /* Zoom Effect on Hover */
+  .image-container:hover .full-image {
+    transform: scale(1.2); /* Scale up the image by 20% */
+  }
+  
+  /* Navigation Buttons */
+  .nav-button {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.7);
     color: black;
     border: none;
-    padding: 10px;
-    font-size: 18px;
+    padding: 12px;
+    font-size: 28px;
     cursor: pointer;
     border-radius: 50%;
     transition: background 0.3s;
     opacity: 0;
-}
-
-.prev-button {
+  }
+  
+  .prev-button {
     left: 10px;
-}
-
-.next-button {
+  }
+  
+  .next-button {
     right: 10px;
-}
-
-.image-container:hover .nav-button {
+  }
+  
+  .image-container:hover .nav-button {
     opacity: 1;
-}
-
-.details-sidebar {
+  }
+  
+  .details-sidebar {
+    position: relative; /* Needed for the close button's absolute positioning */
     flex: 1;
     background: white;
     padding: 20px;
@@ -85,109 +94,161 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    /* height: 600px; */
-    position: relative;
-    margin-bottom: 10px;
-}
-
+    height: 100%; /* Match height with the image container */
+    overflow-y: auto;
+  }
+  
+  
+/* Close Button in Sidebar */
 .close-button {
     position: absolute;
-    top: 10px;
-    right: 15px;
-    font-size: 24px;
-    color: #888;
-    background: none;
-    border: none;
-    cursor: pointer;
-}
-
-.profile-info {
+    top: 10px; /* Position at the top of the sidebar */
+    right: 15px; /* Align to the right edge of the sidebar */
+    font-size: 36px; /* Larger font size for visibility */
+    color: red; /* Red "X" color */
+    background: none; /* Transparent background */
+    border: none; /* No border for a clean look */
+    cursor: pointer; /* Pointer cursor for interaction */
+    font-weight: bold; /* Bold "X" */
+    z-index: 10; /* Ensure it appears above other elements */
+    transition: color 0.3s ease; /* Smooth color transition */
+  }
+  
+  .close-button:hover {
+    color: grey; /* Grey on hover */
+  }
+  
+  /* Profile Information */
+  .profile-info {
     display: flex;
     align-items: center;
     margin-bottom: 10px;
-}
-
-.profile-picture {
-    width: 40px;
-    height: 40px;
+  }
+  
+  .profile-picture {
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     margin-right: 10px;
-}
-
-.profile-name {
-    font-size: 1.2rem;
+  }
+  
+  .profile-name {
+    font-size: 1.4rem;
     font-weight: bold;
     color: #333;
-}
-
-.image-title {
-    font-size: 1.8rem;
+  }
+  
+  /* Image Details */
+  .image-title {
+    font-size: 2rem;
     font-weight: bold;
     color: #222;
     margin-bottom: 10px;
-}
-
-.image-summary, .image-description, .stock-id, .resolution-display {
-    font-size: 1rem;
+  }
+  
+  .image-summary,
+  .image-description,
+  .stock-id {
+    font-size: 1.2rem;
     color: #555;
     margin-bottom: 5px;
-}
-
-.stock-id {
+  }
+  
+  .stock-id {
     margin-top: 5px;
     font-weight: 500;
-    font-size: 1rem;
-    margin-bottom: 5px;
-}
-
-.resolution-display {
-    font-weight: 500;
-    color: black;
-}
-
-.rating-section {
+  }
+  
+  /* Rating Section */
+  .rating-section {
     margin-top: 20px;
-}
-
-.rating-section h3 {
-    font-size: 1.2rem;
+  }
+  
+  .rating-section h3 {
+    font-size: 1.4rem;
     color: #333;
-}
-
-.rating-section span {
-    font-size: 1.5rem;
+  }
+  
+  .rating-section span {
+    font-size: 1.8rem;
     margin-right: 5px;
-}
-
-.pricing-section {
+  }
+  
+  /* Pricing Section */
+  .pricing-section {
     margin-top: 20px;
-}
-
-.action-buttons {
+  }
+  
+  .pricing-section h3 {
+    font-size: 1.4rem;
+    color: #333;
+  }
+  
+  .price-option {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .price-option input[type="radio"] {
+    margin-right: 10px;
+  }
+  
+  .price-option label {
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  /* Action Buttons */
+  .action-buttons {
     display: flex;
     gap: 10px;
     margin-top: 20px;
-}
-
-.save-button, .add-to-cart-button, .share-button {
-    padding: 10px 20px;
+  }
+  
+  .bookmark-button,
+  .add-to-cart-button,
+  .share-button {
+    padding: 12px 24px;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     font-size: 1rem;
     cursor: pointer;
-}
-
-.save-button {
-    background: #f56565;
+    display: flex;
+    align-items: center;
+  }
+  
+  .bookmark-button {
+    background: #4299e1;
     color: white;
-}
-
-.add-to-cart-button {
+  }
+  
+  .add-to-cart-button {
     background: rgb(242, 141, 77);
     color: white;
-}
-
-.share-button {
-    background: #3182ce;
+  }
+  
+  .share-button {
+    background: #6b46c1; /* Purple */
     color: white;
-}
+  }
+  
+  /* Icon Spacing */
+  .action-buttons button .fa-icon {
+    margin-right: 8px;
+  }
+  
+  /* General Styles */
+  body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  h2,
+  h3 {
+    margin: 0;
+  }
+  
+  p {
+    margin: 0 0 10px;
+  }
+  
