@@ -10,7 +10,7 @@ function CheckoutItemList({ items, paymentInfo, onPaymentInfoUpdate }) {
       setIsModalOpen(true);
     };
     const handleBack = () => {
-      navigate('/cart');
+      navigate('/Snapshop-Frontend/cart');
     };
     const handleModalSave = (data) => {
       onPaymentInfoUpdate(data);
