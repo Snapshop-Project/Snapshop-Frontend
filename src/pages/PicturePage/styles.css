@@ -115,7 +115,7 @@
   }
   
   .close-button:hover {
-    color: grey; /* Grey on hover */
+    color: rgb(200, 100, 50);
   }
   
   /* Profile Information */

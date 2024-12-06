@@ -33,7 +33,7 @@
   }
   
   .reset-password-link a:hover {
-    text-decoration: underline;
+    color: rgb(200, 100, 50);
   }
   .create-account-link-container{
     display: flex;
@@ -46,5 +46,5 @@
     font-size: 1rem;
   }
   .create-account-link-container a:hover {
-    text-decoration: underline;
+    color: rgb(200, 100, 50);
   }
