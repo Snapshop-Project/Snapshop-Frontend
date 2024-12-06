@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import Header from '../../components/main-header/Header.js';
-// import Sidebar from '../../components/side-bar/Sidebar.js';
-import SearchBarr from '../../components/search-bar/SearchBarr.js';
 import './styles.css';
 
 const imageData = [

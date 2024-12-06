@@ -1,8 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './SalesSummary.css';
-import { useNavigate } from 'react-router-dom';
 
-function SalesSummary({ showMinimal = true, isPaymentAvailable, items }) {
+function SalesSummary({ showMinimal = true, items }) {
   const itemsInCart = items.length;
   const subtotal = items.reduce((total, item) => total + item.price, 0);
   const gst = subtotal * 0.05;

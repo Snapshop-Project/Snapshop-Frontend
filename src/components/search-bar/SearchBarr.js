@@ -11,19 +11,6 @@ const SearchBarr = ({ filters, setFilters, searchQuery, setSearchQuery }) => {
     const toggleFilterPopup = () => {
         setIsFilterOpen(!isFilterOpen);
     };
-
-    // const [activeFilters, setActiveFilters] = useState({
-    //     people: '',
-    //     orientation: '',
-    //     size: '',
-    //     color: '',
-    // });
-    // const colors = ["#FF0000", "#03c900", "#0000FF", "#fce703", "#9447ff" ,"#634325", "#ff7b00" ,"#FF00FF", "#00FFFF", "#FFFFFF", "#858585" , "#000000"];
-
-    const handleSearchChange = (e) => {
-        setSearchQuery(e.target.value);
-    };
-
     const handleFilterChange = (category, value) => {
         setFilters((prev) => {
             // If the current value is already selected, remove it

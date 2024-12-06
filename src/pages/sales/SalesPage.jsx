@@ -5,14 +5,6 @@ import SaleItemList from '../../components/sale-item-list/SaleItemList.jsx';
 import Grid2 from '@mui/material/Grid2';
 import React, { useState } from 'react';
 
-const pics = [
-    // { id: 'cave', src: '/ExampleImages/Cave.jpg', name: 'The one that got away', format: '1920x1080 (JPEG)', price: 10.99 },
-    // { id: 'cityscape', src: '/ExampleImages/Cityscape.jpg', name: 'Sunset', format: '4K (PNG)', price: 15.99 },
-    // { id: 'animal', src: '/ExampleImages/Animal.jpg', name: 'Morning Hike', format: '1920x1080 (JPEG)', price: 12.99 },
-    // { id: 'portrait', src: '/ExampleImages/Portrait.jpg', name: 'Jumping', format: '1080x720 (JPEG)', price: 8.99 },
-    
-];
-
 function SalesPage() {
     const [items, setItems] = useState([
         { id: 1, src: '/Snapshop-Frontend/ExampleImages/RushingFalls.jpg', name: 'Rushing Falls', purchaser: 'Purchased by: John Deer', price: 17.99 },

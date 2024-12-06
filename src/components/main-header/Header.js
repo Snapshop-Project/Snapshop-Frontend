@@ -1,8 +1,7 @@
-// src/components/Header.js
 import React, { useContext, useState, useRef, useEffect } from 'react';
 import { AuthContext } from '../store/Authentication';
-import './Header.css'; // Optional: For styling
-import { FaUser, FaShoppingCart, FaHome} from 'react-icons/fa'; // Importing icons
+import './Header.css';
+import { FaShoppingCart, FaHome} from 'react-icons/fa';
 import { useNavigate, useLocation } from 'react-router-dom';
 
 const Header = () => {
