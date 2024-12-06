@@ -162,76 +162,59 @@ const imageData = [
     resolution: [1280, 854],
   },
 ];
-
+// Function to check if an image is small
+const isSmallImage = (image) => {
+    const [width, height] = image.resolution;
+    return width < 800 || height < 600; // Threshold for small images
+  };
 function PicturePage() {
     const { id } = useParams();
     const navigate = useNavigate();
     const image = imageData.find((img) => img.id === id);
     const [rating, setRating] = useState(0);
-    const [isBookmarked, setIsBookmarked] = useState(false);
-    const [isModalOpen, setIsModalOpen] = useState(false);
   
-    // Define currentIndex and other variables safely
     const currentIndex = image ? imageData.indexOf(image) : -1;
     const isFirst = currentIndex === 0;
     const isLast = currentIndex === imageData.length - 1;
   
     useEffect(() => {
-      // Ensure the effect runs only if the image exists
       if (!image) {
         return;
       }
   
-      // Handle keyboard navigation
       const handleKeyDown = (event) => {
-        if (event.key === 'ArrowLeft') {
-          // Navigate to previous image
-          if (!isFirst) {
-            navigate(`/picture/${imageData[currentIndex - 1].id}`);
-          }
-        } else if (event.key === 'ArrowRight') {
-          // Navigate to next image
-          if (!isLast) {
-            navigate(`/picture/${imageData[currentIndex + 1].id}`);
-          }
-        } else if (event.key === 'Escape' && isModalOpen) {
-          // Close modal on Escape key
-          setIsModalOpen(false);
+        if (event.key === 'ArrowLeft' && !isFirst) {
+          navigate(`/picture/${imageData[currentIndex - 1].id}`);
+        } else if (event.key === 'ArrowRight' && !isLast) {
+          navigate(`/picture/${imageData[currentIndex + 1].id}`);
         }
       };
   
-      // Add event listener
       window.addEventListener('keydown', handleKeyDown);
   
-      // Clean up the event listener on unmount
       return () => {
         window.removeEventListener('keydown', handleKeyDown);
       };
-    }, [currentIndex, isFirst, isLast, navigate, image, isModalOpen]);
+    }, [currentIndex, isFirst, isLast, navigate, image]);
   
     if (!image) {
       return <p>Image not found</p>;
     }
   
-    const handleRating = (rate) => {
-      setRating(rate);
-    };
-  
     const handleBookmark = () => {
-      setIsBookmarked(!isBookmarked);
-      console.log(
-        `${isBookmarked ? 'Removed bookmark from' : 'Bookmarked'} image with ID: ${
-          image.id
-        }`
-      );
+      alert('Coming Soon!');
     };
   
-    const openModal = () => {
-      setIsModalOpen(true);
+    const handleAddToCart = () => {
+      alert('Coming Soon!');
     };
   
-    const closeModal = () => {
-      setIsModalOpen(false);
+    const handleShare = () => {
+      alert('Coming Soon!');
+    };
+  
+    const handleRating = (rate) => {
+      alert('Coming Soon!');
     };
   
     return (
@@ -240,15 +223,12 @@ function PicturePage() {
         <div className="main-content">
           <div className="content-area">
             <div className="picture-page-full">
-              <div className="image-container" onClick={openModal}>
+              <div className="image-container">
                 <img
                   src={image.src}
                   alt={image.title}
                   className={`full-image ${image.id}`}
                 />
-                <div className="click-indicator">
-                  <FontAwesomeIcon icon={faExpand} />
-                </div>
                 {!isFirst && (
                   <button
                     className="nav-button prev-button"
@@ -325,60 +305,48 @@ function PicturePage() {
                       ★
                     </span>
                   ))}
-                  <p>
-                    {rating > 0
-                      ? `You rated this photo ${rating} star(s)`
-                      : 'No rating yet'}
-                  </p>
                 </div>
   
                 <div className="action-buttons">
                   <button
-                    className={`bookmark-button ${
-                      isBookmarked ? 'bookmarked' : ''
-                    }`}
+                    className="bookmark-button"
                     onClick={handleBookmark}
                     aria-label="Bookmark this image"
                   >
                     <FontAwesomeIcon
-                      icon={isBookmarked ? solidBookmark : regularBookmark}
+                      icon={regularBookmark}
                       className="fa-icon"
                     />
-                    {isBookmarked ? 'Bookmarked' : 'Bookmark'}
+                    Bookmark
                   </button>
-                  <button className="add-to-cart-button">
-                    <FontAwesomeIcon icon={faShoppingCart} className="fa-icon" />{' '}
+                  <button
+                    className="add-to-cart-button"
+                    onClick={handleAddToCart}
+                  >
+                    <FontAwesomeIcon
+                      icon={faShoppingCart}
+                      className="fa-icon"
+                    />
                     Add to Cart
                   </button>
-                  <button className="share-button">
-                    <FontAwesomeIcon icon={faShareAlt} className="fa-icon" /> Share
+                  <button
+                    className="share-button"
+                    onClick={handleShare}
+                  >
+                    <FontAwesomeIcon
+                      icon={faShareAlt}
+                      className="fa-icon"
+                    />
+                    Share
                   </button>
                 </div>
               </div>
             </div>
           </div>
         </div>
-  
-        {/* Modal for Fullscreen Image */}
-        {isModalOpen && (
-          <div className="modal-overlay" onClick={closeModal}>
-            <div
-              className="modal-content"
-              onClick={(e) => e.stopPropagation()} // Prevent closing modal when clicking inside
-            >
-              <button className="modal-close-button" onClick={closeModal}>
-                <FontAwesomeIcon icon={faTimes} />
-              </button>
-              <div className="modal-image-container">
-                <img src={image.src} alt={image.title} className="modal-image" />
-                {/* Optional Grid Overlay */}
-                {/* <div className="grid-overlay"></div> */}
-              </div>
-            </div>
-          </div>
-        )}
       </div>
     );
+    
   }
   
   export default PicturePage;
