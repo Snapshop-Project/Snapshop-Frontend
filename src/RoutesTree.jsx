@@ -5,6 +5,7 @@ import Browser from './pages/browsing/index';
 import Cart from "./pages/cart";
 import EditProfilePage from './pages/editProfile/EditProfilePage';
 
+
 import Checkout from "./pages/checkout";
 import SalesPage from './pages/sales/SalesPage';
 import PicturePage from "./pages/PicturePage";
