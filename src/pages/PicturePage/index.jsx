@@ -248,7 +248,7 @@ const isSmallImage = (image) => {
               <div className="details-sidebar">
                 <button
                   className="close-button"
-                  onClick={() => navigate('/')}
+                  onClick={() => navigate('/Snapshop-Frontend')}
                   aria-label="Close"
                 >
                   ×
