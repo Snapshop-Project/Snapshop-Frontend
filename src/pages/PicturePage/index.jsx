@@ -255,7 +255,7 @@ const isSmallImage = (image) => {
                 </button>
                 <div className="profile-info">
                   <img
-                    src="/Snapshop-Frontend/BlankProfile.webp"
+                    src="/Snapshop-Frontend/ExampleImages/Portrait.jpg"
                     alt="Profile"
                     className="profile-picture"
                   />
