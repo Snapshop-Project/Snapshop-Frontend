@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/Snapshop-Frontend/static/css/main.054874e1.css",
-    "main.js": "/Snapshop-Frontend/static/js/main.f473e30c.js",
+    "main.js": "/Snapshop-Frontend/static/js/main.bcb6eaa0.js",
     "index.html": "/Snapshop-Frontend/index.html",
     "main.054874e1.css.map": "/Snapshop-Frontend/static/css/main.054874e1.css.map",
-    "main.f473e30c.js.map": "/Snapshop-Frontend/static/js/main.f473e30c.js.map"
+    "main.bcb6eaa0.js.map": "/Snapshop-Frontend/static/js/main.bcb6eaa0.js.map"
   },
   "entrypoints": [
     "static/css/main.054874e1.css",
-    "static/js/main.f473e30c.js"
+    "static/js/main.bcb6eaa0.js"
   ]
 }
