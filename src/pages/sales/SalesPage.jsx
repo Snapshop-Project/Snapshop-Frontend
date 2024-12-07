@@ -7,9 +7,9 @@ import React, { useState } from 'react';
 
 function SalesPage() {
     const [items, setItems] = useState([
-        { id: 1, src: '/Snapshop-Frontend/ExampleImages/RushingFalls.jpg', name: 'Rushing Falls', purchaser: 'Purchased by: John Deer', price: 17.99 },
-        { id: 2, src: '/Snapshop-Frontend/ExampleImages/RushingFalls.jpg', name: 'Rushing Falls', purchaser: 'Purchased by: Ron McDonald', price: 17.99 },
-        { id: 3, src: '/Snapshop-Frontend/ExampleImages/RushingFalls.jpg', name: 'Rushing Falls', purchaser: 'Purchased by: Burgess King', price: 17.99 },
+        { id: 1, src: '/Snapshop-Frontend/ExampleImages/Cityscape.jpg', name: 'Cityscape', purchaser: 'Purchased by: John Deer', price: 15.99 },
+        { id: 2, src: '/Snapshop-Frontend/ExampleImages/RedPanda.jpg', name: 'Red Panda', purchaser: 'Purchased by: Ron McDonald', price: 16.99 },
+        { id: 3, src: '/Snapshop-Frontend/ExampleImages/RedPanda.jpg', name: 'Red Panda', purchaser: 'Purchased by: Burgess King', price: 16.99 },
     ]);
   return (
     <div className="cart-app-container">
